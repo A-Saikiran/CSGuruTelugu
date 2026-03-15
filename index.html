@@ -1,432 +1,316 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>CSGuruTelugu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSGuruTelugu | Official Education Portal</title>
 
 <style>
-
-body{
-margin:0;
-font-family:Arial;
-background: linear-gradient(270deg,#1e3c72,#2a5298,#1e3c72);
-background-size:400% 400%;
-animation:bgmove 12s infinite;
-color:white;
+:root {
+    --swayam-blue: #003366;
+    --swayam-orange: #f39200;
+    --light-bg: #f4f7f9;
 }
 
-@keyframes bgmove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
 }
 
-/* TOP BAR */
-
-.topbar{
-background:black;
-padding:8px;
-text-align:center;
-font-size:14px;
+/* TOP GOVT HEADER */
+.gov-header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 3px solid var(--swayam-orange);
 }
 
-/* MENU */
+.gov-logos img { height: 60px; margin-right: 15px; }
 
-.navbar{
-background:#111;
-padding:15px;
-text-align:center;
+.header-right { text-align: right; }
+#datetime { font-weight: bold; color: var(--swayam-blue); font-size: 14px; }
+
+/* MAIN NAVBAR */
+.navbar {
+    background: var(--swayam-blue);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar a{
-color:white;
-margin:0 20px;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
+.navbar a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.navbar a:hover{
-color:#ffcc00;
+.navbar a:hover, .navbar a.active {
+    background: var(--swayam-orange);
+    color: white;
 }
 
-/* HEADER */
-
-.header{
-display:flex;
-align-items:center;
-justify-content:center;
-padding:25px;
+/* NEWS TICKER */
+.ticker-wrap {
+    background: #eef2f7;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
 }
 
-.logo{
-width:80px;
-margin-right:20px;
-border-radius:10px;
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    color: #d32f2f;
+    font-weight: bold;
 }
 
-.title{
-font-size:50px;
-font-weight:bold;
-background: linear-gradient(90deg,#ffcc00,#ff0066);
--webkit-background-clip:text;
-color:transparent;
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
 
-/* YOUTUBE */
-
-.youtube{
-text-align:center;
-margin-top:10px;
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('https://www.transparenttextures.com');
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.youtube a{
-background:red;
-color:white;
-padding:12px 22px;
-text-decoration:none;
-font-size:18px;
-border-radius:8px;
+.hero h1 { margin: 0; font-size: 38px; letter-spacing: 1px; }
+
+/* MAIN CONTENT GRID */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 0 20px;
 }
 
-/* MAIN LAYOUT */
-
-.container{
-display:flex;
-margin:30px;
-gap:20px;
-flex-wrap:wrap;
+.card {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-/* CARDS */
-
-.card{
-background:white;
-color:black;
-padding:20px;
-border-radius:10px;
-flex:1;
-min-width:300px;
-box-shadow:0 0 15px rgba(0,0,0,0.3);
-transition:transform 0.3s;
+.card-header {
+    background: var(--swayam-blue);
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
 }
 
-.card:hover{
-transform:scale(1.05);
+.card-body { padding: 20px; }
+
+/* LISTS */
+ul.portal-links { list-style: none; padding: 0; }
+ul.portal-links li { 
+    padding: 10px 0; 
+    border-bottom: 1px solid #eee;
+}
+ul.portal-links li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: 500;
+}
+ul.portal-links li a:hover { color: var(--swayam-orange); }
+
+/* COUNTDOWN BOX */
+.timer-box {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
 }
 
-/* SCROLL */
-
-.scroll{
-height:250px;
-overflow:hidden;
-position:relative;
+.timer-display {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
 }
 
-.scroll ul{
-position:absolute;
-animation:scroll 15s linear infinite;
-}
-
-.scroll li{
-margin:15px 0;
-}
-
-.scroll a{
-text-decoration:none;
-color:#0066cc;
-font-weight:bold;
-}
-
-@keyframes scroll{
-0%{top:100%;}
-100%{top:-100%;}
-}
-
-/* MATERIALS */
-
-.materials{
-background:white;
-color:black;
-margin:30px;
-padding:20px;
-border-radius:10px;
-}
-
-.materials h2{
-color:#2a5298;
-}
-
-.materials ul{
-list-style:none;
-padding:0;
-}
-
-.materials li{
-margin:12px 0;
-font-size:18px;
-}
-
-.materials a{
-text-decoration:none;
-color:#0066cc;
-font-weight:bold;
-}
-
-.materials a:hover{
-color:red;
-}
-
-/* AI BOT */
-
-.chatbot{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#ff0066;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-cursor:pointer;
-}
+.unit span { display: block; font-size: 24px; font-weight: 800; color: #c62828; }
 
 /* FOOTER */
-
-.footer{
-background:black;
-text-align:center;
-padding:20px;
-margin-top:40px;
-width:100%;
+.footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
 }
 
+/* CHATBOT */
+.chatbot {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--swayam-orange);
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 800px) {
+    .container { grid-template-columns: 1fr; }
+}
 </style>
-
 </head>
-
 <body>
 
-<!-- DATE TIME -->
-
-<div class="topbar">
-<span id="datetime"></span>
+<!-- GOVT STYLE TOP HEADER -->
+<div class="gov-header">
+    <div class="gov-logos">
+        <img src="LOGO.jpg" alt="CSGuru Logo" style="border-radius: 5px;">
+        <!-- You can add a secondary logo here for a govt feel -->
+    </div>
+    <div class="header-right">
+        <div id="datetime">Loading Date...</div>
+        <div style="margin-top: 5px;">
+            <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank">
+                <img src="https://upload.wikimedia.org" height="25" alt="YouTube">
+            </a>
+        </div>
+    </div>
 </div>
 
-<!-- MENU -->
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="#" class="active">HOME</a>
+    <a href="ugcnet.html">UGC NET / SET</a>
+    <a href="telangana.html">TG PORTALS</a>
+    <a href="#materials">TUTORIALS</a>
+    <a href="#resources">FREE RESOURCES</a>
+</nav>
 
-<div class="navbar">
-
-<a href="#">Home</a>
-<a href="ugcnet.html">UGCNET / TGSET</a>
-<a href="#resources">Free Resources</a>
-<a href="#materials">Tutorials</a>
-<a href="telangana.html">Telangana Portals</a>
-<a href="about.html">About</a>
-
+<!-- LIVE TICKER -->
+<div class="ticker-wrap">
+    <div class="ticker">
+        🔥 TG EAPCET 2026 Notification Released! Registration starts soon. • 📢 TG ICET 2026 Exams on May 13-14. • 🎓 National Digital Library is now offering 24/7 free access to all students.
+    </div>
 </div>
 
-<!-- HEADER -->
-
-<div class="header">
-
-<img src="LOGO.jpg" class="logo">
-
-<div class="title" id="typing"></div>
-
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1 id="typing"></h1>
+    <p>Empowering Students through Digital Education & Career Guidance</p>
 </div>
-
-<!-- YOUTUBE -->
-
-<div class="youtube">
-
-<a href="https://www.youtube.com/@CSGuruTelugu" target="_blank">
-▶ Visit My YouTube Channel
-</a>
-
-</div>
-
-<!-- MAIN CONTENT -->
 
 <div class="container">
+    <!-- LEFT SIDE -->
+    <div class="main-content">
+        <div class="card">
+            <div class="card-header">🎓 Government Learning Portals (Verified)</div>
+            <div class="card-body">
+                <ul class="portal-links">
+                    <li><a href="https://swayam.gov.in/">SWAYAM Online Courses</a></li>
+                    <li><a href="https://nptel.ac.in/">NPTEL IIT Courses</a></li>
+                    <li><a href="https://diksha.gov.in/">DIKSHA Platform</a></li>
+                    <li><a href="https://ndl.iitkgp.ac.in/">National Digital Library</a></li>
+                    <li><a href="https://tgche.ac.in">TG Council of Higher Education (TGCHE)</a></li>
+                </ul>
+            </div>
+        </div>
 
-<!-- JOBS -->
+        <div class="card" id="materials">
+            <div class="card-header">📚 Study Materials & Tutorials</div>
+            <div class="card-body">
+                <div style="display: flex; gap: 20px;">
+                    <a href="java.html" style="background:#f4f4f4; padding:15px; border-radius:5px; text-decoration:none; color:var(--swayam-blue); border:1px solid #ddd; flex:1; text-align:center;"><b>Java Programming</b></a>
+                    <a href="cisco.html" style="background:#f4f4f4; padding:15px; border-radius:5px; text-decoration:none; color:var(--swayam-blue); border:1px solid #ddd; flex:1; text-align:center;"><b>Cisco Networking</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="card">
+    <!-- RIGHT SIDE -->
+    <aside class="sidebar">
+        <div class="card">
+            <div class="card-header">⏳ TG EAPCET 2026 COUNTDOWN</div>
+            <div class="card-body">
+                <div class="timer-box">
+                    <p style="margin:0; font-size:13px; color:#666;">Exam Date: May 4, 2026</p>
+                    <div class="timer-display">
+                        <div class="unit"><span id="days">00</span><small>DAYS</small></div>
+                        <div class="unit"><span id="hours">00</span><small>HRS</small></div>
+                        <div class="unit"><span id="mins">00</span><small>MINS</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<h2>🔥 Latest Job Updates (Official)</h2>
-
-<div class="scroll">
-
-<ul>
-
-<li><a href="https://www.ncs.gov.in/" target="_blank">National Career Service (Govt Jobs)</a></li>
-
-<li><a href="https://ssc.nic.in/" target="_blank">SSC Recruitment Portal</a></li>
-
-<li><a href="https://www.ibps.in/" target="_blank">IBPS Bank Jobs</a></li>
-
-<li><a href="https://www.rrbcdg.gov.in/" target="_blank">Railway Recruitment Board</a></li>
-
-<li><a href="https://careers.google.com/" target="_blank">Google Careers</a></li>
-
-<li><a href="https://www.amazon.jobs/" target="_blank">Amazon Jobs</a></li>
-
-</ul>
-
+        <div class="card">
+            <div class="card-header">🔥 Latest Career Updates</div>
+            <div class="card-body" style="height: 200px; overflow-y: auto;">
+                <ul class="portal-links" style="font-size: 14px;">
+                    <li><a href="https://ssc.nic.in/">SSC CGL Notification 2026</a></li>
+                    <li><a href="https://tspsc.gov.in">TGPSC Group Update</a></li>
+                    <li><a href="https://www.ibps.in/">IBPS PO Exam Calendar</a></li>
+                    <li><a href="https://careers.google.com/">Google AI Internship 2026</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
 </div>
 
-</div>
+<div class="chatbot" onclick="window.open('https://chat.openai.com')">🤖</div>
 
-<!-- TECH NEWS -->
-
-<div class="card">
-
-<h2>🌍 Tech & AI News</h2>
-
-<div class="scroll">
-
-<ul>
-
-<li><a href="https://news.google.com/search?q=Artificial+Intelligence" target="_blank">Latest AI News</a></li>
-
-<li><a href="https://news.google.com/search?q=technology" target="_blank">Global Technology News</a></li>
-
-<li><a href="https://openai.com/blog" target="_blank">OpenAI Updates</a></li>
-
-<li><a href="https://ai.googleblog.com/" target="_blank">Google AI Blog</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- TUTORIALS -->
-
-<div class="materials" id="materials">
-
-<h2>📚 Tutorials / Materials</h2>
-
-<ul>
-
-<li><a href="java.html">Java Programming</a></li>
-
-<li><a href="cisco.html">Cisco Networking</a></li>
-
-</ul>
-
-</div>
-
-<!-- FREE RESOURCES -->
-
-<div class="materials" id="resources">
-
-<h2>🇮🇳 Government of India Learning Portals</h2>
-
-<ul>
-
-<li><a href="https://swayam.gov.in/" target="_blank">SWAYAM Online Courses</a></li>
-
-<li><a href="https://nptel.ac.in/" target="_blank">NPTEL IIT Courses</a></li>
-
-<li><a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library</a></li>
-
-<li><a href="https://diksha.gov.in/" target="_blank">DIKSHA Learning Platform</a></li>
-
-<li><a href="https://spoken-tutorial.org/" target="_blank">IIT Spoken Tutorial</a></li>
-
-</ul>
-
-<h2>🏛 State Government Learning Portals</h2>
-
-<ul>
-
-<li><a href="https://tsat.telangana.gov.in/" target="_blank">TSAT Telangana Learning</a></li>
-
-<li><a href="https://www.apsche.org/" target="_blank">AP Higher Education Portal</a></li>
-
-</ul>
-
-<h2>🌍 Global Free Learning Platforms</h2>
-
-<ul>
-
-<li><a href="https://infyspringboard.onwingspan.com/" target="_blank">Infosys Springboard</a></li>
-
-<li><a href="https://www.netacad.com/" target="_blank">Cisco Networking Academy</a></li>
-
-<li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
-
-<li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
-
-<li><a href="https://www.edx.org/" target="_blank">edX Courses</a></li>
-
-<li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn</a></li>
-
-<li><a href="https://aws.amazon.com/training/" target="_blank">AWS Training</a></li>
-
-<li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
-
-<li><a href="https://ocw.mit.edu/" target="_blank">MIT OpenCourseWare</a></li>
-
-</ul>
-
-</div>
-
-<!-- AI BOT -->
-
-<div class="chatbot" onclick="openAI()">🤖</div>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-© 2026 CSGuruTelugu | All Rights Reserved
-
-</div>
+<footer class="footer">
+    <p><b>CSGuruTelugu | Digital Education Portal</b></p>
+    <p>© 2026 All Rights Reserved | Designed for Indian Students</p>
+</footer>
 
 <script>
-
-/* DATE TIME */
-
+// DATE & TIME
 function updateTime(){
-let now=new Date();
-document.getElementById("datetime").innerHTML=now.toLocaleString();
+    document.getElementById("datetime").innerHTML = new Date().toLocaleString();
 }
+setInterval(updateTime, 1000);
 
-setInterval(updateTime,1000);
-
-/* TYPING TITLE */
-
-let text="CSGuruTelugu";
+// TYPING EFFECT
+let text="Welcome to CSGuruTelugu";
 let i=0;
-
 function typing(){
-
-if(i<text.length){
-
-document.getElementById("typing").innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(typing,120);
-
+    if(i<text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+    }
 }
-
-}
-
 typing();
 
-/* AI BUTTON */
-
-function openAI(){
-
-window.open("https://chat.openai.com","_blank");
-
+// COUNTDOWN TIMER
+function updateTimer() {
+    const examDate = new Date("May 4, 2026 09:00:00").getTime();
+    const now = new Date().getTime();
+    const diff = examDate - now;
+    
+    if (diff > 0) {
+        document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("mins").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    }
 }
-
+setInterval(updateTimer, 60000);
+updateTimer();
 </script>
 
 </body>
