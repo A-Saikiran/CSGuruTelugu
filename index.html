@@ -8,14 +8,33 @@
 body{
 margin:0;
 font-family:Arial;
-background: linear-gradient(135deg,#1e3c72,#2a5298);
+background: linear-gradient(270deg,#1e3c72,#2a5298,#1e3c72);
+background-size:400% 400%;
+animation:bgmove 10s infinite;
 color:white;
 }
 
-/* MENU BAR */
+/* ANIMATED BACKGROUND */
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* TOP BAR */
+
+.topbar{
+background:black;
+padding:8px;
+text-align:center;
+font-size:14px;
+}
+
+/* MENU */
 
 .navbar{
-background:black;
+background:#111;
 padding:15px;
 text-align:center;
 }
@@ -29,7 +48,7 @@ font-weight:bold;
 }
 
 .navbar a:hover{
-color:yellow;
+color:#ffcc00;
 }
 
 /* HEADER */
@@ -55,7 +74,23 @@ background: linear-gradient(90deg,#ffcc00,#ff0066);
 color:transparent;
 }
 
-/* MAIN LAYOUT */
+/* YOUTUBE BUTTON */
+
+.youtube{
+text-align:center;
+margin-top:10px;
+}
+
+.youtube a{
+background:red;
+color:white;
+padding:12px 22px;
+text-decoration:none;
+font-size:18px;
+border-radius:8px;
+}
+
+/* LAYOUT */
 
 .container{
 display:flex;
@@ -63,61 +98,23 @@ margin:30px;
 gap:20px;
 }
 
-/* LEFT JOB SECTION */
+/* CARDS */
 
-.jobs{
-flex:2;
+.card{
 background:white;
 color:black;
 padding:20px;
 border-radius:10px;
-}
-
-/* RIGHT NEWS */
-
-.news{
 flex:1;
-background:white;
-color:black;
-padding:20px;
-border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+transition:transform 0.3s;
 }
 
-/* SUBJECT SECTION */
-
-.subjects{
-background:white;
-color:black;
-margin:30px;
-padding:20px;
-border-radius:10px;
+.card:hover{
+transform:scale(1.05);
 }
 
-.subjects h2{
-color:#2a5298;
-}
-
-.subjects ul{
-list-style:none;
-padding:0;
-}
-
-.subjects li{
-margin:10px 0;
-font-size:18px;
-}
-
-.subjects a{
-text-decoration:none;
-color:#0066cc;
-font-weight:bold;
-}
-
-.subjects a:hover{
-color:red;
-}
-
-/* SCROLLING */
+/* SCROLL */
 
 .scroll{
 height:250px;
@@ -134,28 +131,48 @@ animation:scroll 15s linear infinite;
 margin:15px 0;
 }
 
+.scroll a{
+text-decoration:none;
+color:#0066cc;
+font-weight:bold;
+}
+
 @keyframes scroll{
 0%{top:100%;}
 100%{top:-100%;}
 }
 
-/* YOUTUBE */
+/* MATERIALS */
 
-.youtube{
-text-align:center;
-margin-top:10px;
+.materials{
+background:white;
+color:black;
+margin:30px;
+padding:20px;
+border-radius:10px;
 }
 
-.youtube a{
-background:red;
-color:white;
-padding:12px 20px;
-text-decoration:none;
+.materials ul{
+list-style:none;
+padding:0;
+}
+
+.materials li{
+margin:12px 0;
 font-size:18px;
-border-radius:8px;
 }
 
-/* AI BOT BUTTON */
+.materials a{
+text-decoration:none;
+color:#0066cc;
+font-weight:bold;
+}
+
+.materials a:hover{
+color:red;
+}
+
+/* AI BOT */
 
 .chatbot{
 position:fixed;
@@ -169,11 +186,12 @@ font-size:22px;
 cursor:pointer;
 }
 
+/* FOOTER */
+
 .footer{
-text-align:center;
 background:black;
+text-align:center;
 padding:20px;
-margin-top:40px;
 }
 
 </style>
@@ -182,12 +200,20 @@ margin-top:40px;
 
 <body>
 
+<!-- DATE & TIME -->
+
+<div class="topbar">
+
+<span id="datetime"></span>
+
+</div>
+
 <!-- MENU -->
 
 <div class="navbar">
 
 <a href="#">Home</a>
-<a href="#materials">Materials</a>
+<a href="#materials">Tutorials / Materials</a>
 <a href="about.html">About</a>
 
 </div>
@@ -198,25 +224,25 @@ margin-top:40px;
 
 <img src="LOGO.jpg" class="logo">
 
-<div class="title">CSGuruTelugu</div>
+<div class="title" id="typing"></div>
 
 </div>
 
 <div class="youtube">
 
 <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank">
+
 ▶ Visit My YouTube Channel
+
 </a>
 
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN SECTION -->
 
 <div class="container">
 
-<!-- JOBS -->
-
-<div class="jobs">
+<div class="card">
 
 <h2>🔥 Latest Job Updates</h2>
 
@@ -240,9 +266,7 @@ margin-top:40px;
 
 </div>
 
-<!-- TECH NEWS -->
-
-<div class="news">
+<div class="card">
 
 <h2>🌍 Tech & AI News</h2>
 
@@ -256,7 +280,7 @@ margin-top:40px;
 
 <li><a href="https://www.google.com/search?q=google+ai+news" target="_blank">Google AI Developments</a></li>
 
-<li><a href="https://www.google.com/search?q=global+tech+news" target="_blank">World Tech News</a></li>
+<li><a href="https://www.google.com/search?q=tech+news+world" target="_blank">World Tech News</a></li>
 
 </ul>
 
@@ -268,7 +292,7 @@ margin-top:40px;
 
 <!-- MATERIALS -->
 
-<div class="subjects" id="materials">
+<div class="materials" id="materials">
 
 <h2>📚 Tutorials / Materials</h2>
 
@@ -286,21 +310,7 @@ margin-top:40px;
 
 <!-- AI BOT -->
 
-<div class="chatbot" onclick="openAI()">
-
-🤖
-
-</div>
-
-<script>
-
-function openAI(){
-
-window.open("https://chat.openai.com","_blank");
-
-}
-
-</script>
+<div class="chatbot" onclick="openAI()">🤖</div>
 
 <!-- FOOTER -->
 
@@ -309,6 +319,44 @@ window.open("https://chat.openai.com","_blank");
 © 2026 CSGuruTelugu | All Rights Reserved
 
 </div>
+
+<script>
+
+/* LIVE DATE TIME */
+
+function updateTime(){
+let now=new Date();
+document.getElementById("datetime").innerHTML=now.toLocaleString();
+}
+
+setInterval(updateTime,1000);
+
+/* TYPING EFFECT */
+
+let text="CSGuruTelugu";
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,120);
+}
+
+}
+
+typing();
+
+/* AI BOT */
+
+function openAI(){
+
+window.open("https://chat.openai.com","_blank");
+
+}
+
+</script>
 
 </body>
 </html>
