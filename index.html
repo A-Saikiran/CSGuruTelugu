@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+
 <title>CSGuruTelugu</title>
 
 <style>
@@ -9,39 +9,100 @@
 body{
 font-family: Arial;
 margin:0;
-background:#f4f4f4;
+background:#f5f7fb;
 }
+
+/* HEADER */
 
 header{
-background:#111;
+background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
 color:white;
+padding:25px;
 text-align:center;
-padding:20px;
 }
 
+/* NAVIGATION */
+
 nav{
-background:#333;
-padding:10px;
+background:#ff6600;
+padding:12px;
 text-align:center;
 }
 
 nav a{
 color:white;
 margin:15px;
-text-decoration:none;
 font-size:18px;
+text-decoration:none;
+font-weight:bold;
 }
 
+nav a:hover{
+color:black;
+}
+
+/* LIVE NEWS TICKER */
+
+.ticker{
+background:#111;
+color:white;
+padding:10px;
+font-size:16px;
+}
+
+/* MAIN SECTION */
+
 section{
-padding:30px;
+padding:40px;
 text-align:center;
 }
+
+/* BUTTON */
+
+.btn{
+padding:12px 25px;
+background:#ff0000;
+color:white;
+border:none;
+font-size:18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#cc0000;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:8px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
 
 footer{
 background:black;
 color:white;
 text-align:center;
-padding:10px;
+padding:15px;
 margin-top:40px;
 }
 
@@ -52,8 +113,11 @@ margin-top:40px;
 <body>
 
 <header>
+
 <h1>CSGuruTelugu</h1>
-<p>Programming | Networking | Technology Updates in Telugu</p>
+
+<p>Programming | Networking | Tech Updates in Telugu</p>
+
 </header>
 
 <nav>
@@ -65,19 +129,61 @@ margin-top:40px;
 
 </nav>
 
+<!-- LIVE JOB UPDATE SCROLL -->
+
+<div class="ticker">
+
+<marquee>
+
+🔥 Latest Job Updates: TCS Hiring Freshers | Infosys Recruitment | Google Internship | Amazon Hiring Developers | Wipro Careers
+
+</marquee>
+
+</div>
+
 <section>
 
 <h2>Welcome to CSGuruTelugu</h2>
 
-<p>Learn programming, networking and latest technology in Telugu.</p>
+<p>Learn Programming, Networking and Latest Technology in Telugu</p>
 
-<p>
 <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank">
-Visit My YouTube Channel
-</a>
-</p>
 
-<h2>Latest Videos</h2>
+<button class="btn">Visit My YouTube Channel</button>
+
+</a>
+
+<h2 style="margin-top:40px;">Explore Content</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Study Materials</h3>
+
+<p>Download notes, labs and PDFs</p>
+
+</div>
+
+<div class="card">
+
+<h3>Tech Updates</h3>
+
+<p>Latest technology news everyday</p>
+
+</div>
+
+<div class="card">
+
+<h3>Programming Tutorials</h3>
+
+<p>Learn coding step by step</p>
+
+</div>
+
+</div>
+
+<h2 style="margin-top:50px;">Latest Videos</h2>
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed?listType=user_uploads&list=CSGuruTelugu">
