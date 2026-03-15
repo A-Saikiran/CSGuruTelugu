@@ -1,269 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<title>Telangana Student Portals | CSGuruTelugu</title>
+<title>Telangana Student Portal | CSGuruTelugu</title>
 
 <style>
 
 body{
 font-family:Arial;
 margin:0;
-background:linear-gradient(120deg,#6a11cb,#2575fc);
+background:#f2f5ff;
 }
 
-header{
-background:#111;
+/* NAVBAR */
+
+.navbar{
+background:#0d47a1;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 color:white;
-padding:20px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:#ffd54f;
+}
+
+/* HEADER */
+
+header{
 text-align:center;
+padding:30px;
+background:linear-gradient(120deg,#1e88e5,#42a5f5);
+color:white;
 }
 
 header h1{
-color:#ffd700;
-font-size:42px;
+font-size:40px;
 }
 
-.container{
-padding:30px;
+/* SEARCH */
+
+.search-box{
+text-align:center;
+margin:20px;
 }
 
-.section{
+.search-box input{
+width:60%;
+padding:10px;
+font-size:16px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
 background:white;
 padding:20px;
-margin-bottom:25px;
 border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
+text-align:center;
 }
 
-.section h2{
-color:#6a11cb;
+.card h3{
+color:#0d47a1;
 }
 
-ul{
-line-height:2;
-font-size:18px;
-}
-
-a{
+.card a{
 text-decoration:none;
 color:#1565c0;
 font-weight:bold;
 }
 
-a:hover{
-color:red;
+/* SECTION */
+
+.section{
+padding:30px;
 }
 
+.section h2{
+color:#0d47a1;
+}
+
+ul{
+line-height:2;
+}
+
+/* CHATBOT */
+
+#chatbot{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#0d47a1;
+color:white;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
+font-size:20px;
+}
+
+#chatbox{
+display:none;
+position:fixed;
+bottom:80px;
+right:20px;
+width:300px;
+background:white;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+#chatbox-header{
+background:#0d47a1;
+color:white;
+padding:10px;
+}
+
+#chatbox-body{
+padding:10px;
+height:200px;
+overflow:auto;
+}
+
+#chatbox input{
+width:100%;
+padding:8px;
+border:none;
+border-top:1px solid #ccc;
+}
+
+/* FOOTER */
+
 footer{
-background:#111;
+background:#0d47a1;
 color:white;
 text-align:center;
 padding:15px;
+margin-top:30px;
 }
 
 </style>
 
 </head>
 
-
 <body>
+
+<!-- NAVIGATION BAR -->
+
+<div class="navbar">
+
+<div><b>CSGuruTelugu</b></div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="#">Tutorials</a>
+<a href="#">Materials</a>
+<a href="#">Telangana Portals</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+<!-- HEADER -->
 
 <header>
 
-<h1>CSGuruTelugu</h1>
-
-<h3>Telangana Student & Education Portals</h3>
+<h1>Telangana Student Dashboard</h1>
+<p>All Education, Exams, Jobs & Universities in one place</p>
 
 </header>
 
+<!-- SEARCH -->
 
-<div class="container">
+<div class="search-box">
 
-
-<!-- EDUCATION BOARDS -->
-
-<div class="section">
-
-<h2>📚 Telangana Education Boards</h2>
-
-<ul>
-
-<li><a href="https://www.bse.telangana.gov.in/" target="_blank">TS SSC Board</a></li>
-
-<li><a href="https://bie.telangana.gov.in/" target="_blank">Telangana Intermediate Board</a></li>
-
-<li><a href="https://tgche.ac.in/" target="_blank">Telangana Council of Higher Education</a></li>
-
-<li><a href="https://sbtet.telangana.gov.in/" target="_blank">State Board of Technical Education (Polytechnic)</a></li>
-
-</ul>
+<input type="text" id="search" placeholder="Search portals like TSPSC, EAMCET, JNTU...">
 
 </div>
 
+<!-- DASHBOARD -->
 
+<div class="dashboard">
 
-<!-- ENTRANCE EXAMS -->
-
-<div class="section">
-
-<h2>🎯 Telangana Common Entrance Tests</h2>
-
-<ul>
-
-<li><a href="https://eapcet.tsche.ac.in/" target="_blank">TG EAPCET</a></li>
-
-<li><a href="https://icet.tsche.ac.in/" target="_blank">TG ICET</a></li>
-
-<li><a href="https://edcet.tsche.ac.in/" target="_blank">TG EDCET</a></li>
-
-<li><a href="https://lawcet.tsche.ac.in/" target="_blank">TG LAWCET</a></li>
-
-<li><a href="https://pgecet.tsche.ac.in/" target="_blank">TG PGECET</a></li>
-
-<li><a href="https://pecet.tsche.ac.in/" target="_blank">TG PECET</a></li>
-
-<li><a href="https://ecet.tsche.ac.in/" target="_blank">TG ECET</a></li>
-
-<li><a href="https://polycetts.nic.in/" target="_blank">TG POLYCET</a></li>
-
-</ul>
-
+<div class="card">
+<h3>TSPSC Jobs</h3>
+<a href="https://tspsc.gov.in/" target="_blank">Open Portal</a>
 </div>
 
-
-
-<!-- GURUKULAM -->
-
-<div class="section">
-
-<h2>🏫 Telangana Gurukul / Residential Schools</h2>
-
-<ul>
-
-<li><a href="https://tgtwgurukulam.telangana.gov.in/" target="_blank">TSWREIS Gurukul Schools</a></li>
-
-<li><a href="https://mjptbcwreis.telangana.gov.in/" target="_blank">MJPTBC Welfare Gurukul Schools</a></li>
-
-<li><a href="https://tstwreis.telangana.gov.in/" target="_blank">Tribal Welfare Gurukul Schools</a></li>
-
-<li><a href="https://tgrjc.cgg.gov.in/" target="_blank">Telangana Residential Junior Colleges</a></li>
-
-</ul>
-
+<div class="card">
+<h3>TG EAPCET</h3>
+<a href="https://eapcet.tgche.ac.in/" target="_blank">Open Portal</a>
 </div>
 
+<div class="card">
+<h3>TS Intermediate</h3>
+<a href="https://bie.telangana.gov.in/" target="_blank">Open Portal</a>
+</div>
 
+<div class="card">
+<h3>Osmania University</h3>
+<a href="https://www.osmania.ac.in/" target="_blank">Open Portal</a>
+</div>
+
+<div class="card">
+<h3>DOST Admissions</h3>
+<a href="https://dost.cgg.gov.in/" target="_blank">Open Portal</a>
+</div>
+
+<div class="card">
+<h3>SSC Board</h3>
+<a href="https://bse.telangana.gov.in/" target="_blank">Open Portal</a>
+</div>
+
+</div>
 
 <!-- UNIVERSITIES -->
 
 <div class="section">
 
-<h2>🎓 Telangana Universities</h2>
+<h2>Telangana Universities</h2>
 
 <ul>
-
-<li><a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a></li>
 
 <li><a href="https://jntuh.ac.in/" target="_blank">JNTU Hyderabad</a></li>
 
-<li><a href="https://www.kuonline.co.in/" target="_blank">Kakatiya University</a></li>
+<li><a href="https://kakatiya.ac.in/" target="_blank">Kakatiya University</a></li>
 
-<li><a href="https://www.satavahana.ac.in/" target="_blank">Satavahana University</a></li>
+<li><a href="https://satavahana.ac.in/" target="_blank">Satavahana University</a></li>
 
-<li><a href="https://www.palamuruuniversity.ac.in/" target="_blank">Palamuru University</a></li>
+<li><a href="https://palamuruuniversity.ac.in/" target="_blank">Palamuru University</a></li>
 
-<li><a href="https://www.telanganauniversity.ac.in/" target="_blank">Telangana University</a></li>
-
-<li><a href="https://www.mguniversity.ac.in/" target="_blank">Mahatma Gandhi University</a></li>
-
-<li><a href="https://www.braou.ac.in/" target="_blank">Dr BR Ambedkar Open University</a></li>
+<li><a href="https://telanganauniversity.ac.in/" target="_blank">Telangana University</a></li>
 
 </ul>
 
 </div>
 
-
-
-<!-- TGCHE INITIATIVES -->
-
-<div class="section">
-
-<h2>🏛 TGCHE Initiatives</h2>
-
-<ul>
-
-<li><a href="https://dost.cgg.gov.in/" target="_blank">DOST Degree Online Admission</a></li>
-
-<li><a href="https://tgche.ac.in/statistical-booklet/" target="_blank">TGCHE Statistical Booklet</a></li>
-
-<li><a href="https://tgche.ac.in/incubation-innovation-centres/" target="_blank">Incubation & Innovation Centres</a></li>
-
-<li><a href="https://tgche.ac.in/guidelines-financial-assistance/" target="_blank">Financial Assistance Guidelines</a></li>
-
-<li><a href="https://tgche.ac.in/perspective-plan-technical-education/" target="_blank">Perspective Plan for Technical Education</a></li>
-
-<li><a href="https://tgche.ac.in/ug-foreign-languages/" target="_blank">UG Foreign Language Courses</a></li>
-
-</ul>
-
-</div>
-
-
-
-<!-- GOVT PORTALS -->
-
-<div class="section">
-
-<h2>🇮🇳 Government Education Portals</h2>
-
-<ul>
-
-<li><a href="https://www.india.gov.in/" target="_blank">Government of India Portal</a></li>
-
-<li><a href="https://www.education.gov.in/" target="_blank">Ministry of Education</a></li>
-
-<li><a href="https://aishe.gov.in/" target="_blank">AISHE Higher Education Survey</a></li>
-
-<li><a href="https://swayam.gov.in/" target="_blank">SWAYAM Free Online Courses</a></li>
-
-<li><a href="https://www.swayamprabha.gov.in/" target="_blank">SWAYAM PRABHA Educational TV</a></li>
-
-<li><a href="https://www.ugc.gov.in/" target="_blank">UGC</a></li>
-
-<li><a href="https://www.aicte-india.org/" target="_blank">AICTE</a></li>
-
-<li><a href="https://www.telangana.gov.in/" target="_blank">Telangana Government</a></li>
-
-</ul>
-
-</div>
-
-
-
-<!-- JOBS -->
-
-<div class="section">
-
-<h2>💼 Telangana Government Jobs</h2>
-
-<ul>
-
-<li><a href="https://www.tspsc.gov.in/" target="_blank">TSPSC Official Portal</a></li>
-
-<li><a href="https://www.ncs.gov.in/" target="_blank">National Career Service</a></li>
-
-<li><a href="https://www.tcsion.com/" target="_blank">TCS iON Career Skills</a></li>
-
-</ul>
-
-</div>
-
-
-</div>
-
+<!-- FOOTER -->
 
 <footer>
 
@@ -271,6 +261,37 @@ padding:15px;
 
 </footer>
 
+<!-- CHATBOT -->
+
+<div id="chatbot" onclick="toggleChat()">💬</div>
+
+<div id="chatbox">
+
+<div id="chatbox-header">CSGuru AI</div>
+
+<div id="chatbox-body">
+
+Hello 👋  
+Ask about Telangana exams, universities, or jobs.
+
+</div>
+
+<input type="text" placeholder="Type your question...">
+
+</div>
+
+<script>
+
+function toggleChat(){
+let box=document.getElementById("chatbox");
+
+if(box.style.display==="block")
+box.style.display="none";
+else
+box.style.display="block";
+}
+
+</script>
 
 </body>
 </html>
