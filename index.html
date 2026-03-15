@@ -60,6 +60,7 @@ color:transparent;
 .container{
 display:flex;
 margin:30px;
+gap:20px;
 }
 
 /* LEFT JOB SECTION */
@@ -70,14 +71,9 @@ background:white;
 color:black;
 padding:20px;
 border-radius:10px;
-margin-right:20px;
 }
 
-.jobs h2{
-color:#2a5298;
-}
-
-/* RIGHT NEWS SECTION */
+/* RIGHT NEWS */
 
 .news{
 flex:1;
@@ -87,7 +83,41 @@ padding:20px;
 border-radius:10px;
 }
 
-/* SCROLL LIST */
+/* SUBJECT SECTION */
+
+.subjects{
+background:white;
+color:black;
+margin:30px;
+padding:20px;
+border-radius:10px;
+}
+
+.subjects h2{
+color:#2a5298;
+}
+
+.subjects ul{
+list-style:none;
+padding:0;
+}
+
+.subjects li{
+margin:10px 0;
+font-size:18px;
+}
+
+.subjects a{
+text-decoration:none;
+color:#0066cc;
+font-weight:bold;
+}
+
+.subjects a:hover{
+color:red;
+}
+
+/* SCROLLING */
 
 .scroll{
 height:250px;
@@ -102,17 +132,6 @@ animation:scroll 15s linear infinite;
 
 .scroll li{
 margin:15px 0;
-font-size:18px;
-}
-
-.scroll a{
-text-decoration:none;
-color:#0066cc;
-font-weight:bold;
-}
-
-.scroll a:hover{
-color:red;
 }
 
 @keyframes scroll{
@@ -120,7 +139,7 @@ color:red;
 100%{top:-100%;}
 }
 
-/* YOUTUBE BUTTON */
+/* YOUTUBE */
 
 .youtube{
 text-align:center;
@@ -136,7 +155,19 @@ font-size:18px;
 border-radius:8px;
 }
 
-/* FOOTER */
+/* AI BOT BUTTON */
+
+.chatbot{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff0066;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+cursor:pointer;
+}
 
 .footer{
 text-align:center;
@@ -156,8 +187,7 @@ margin-top:40px;
 <div class="navbar">
 
 <a href="#">Home</a>
-<a href="jobs.html">Jobs</a>
-<a href="tech.html">Tech News</a>
+<a href="#materials">Materials</a>
 <a href="about.html">About</a>
 
 </div>
@@ -204,8 +234,6 @@ margin-top:40px;
 
 <li><a href="https://www.google.com/search?q=government+jobs+india" target="_blank">Latest Government Jobs India</a></li>
 
-<li><a href="https://www.google.com/search?q=software+jobs+for+freshers+india" target="_blank">Software Jobs For Freshers</a></li>
-
 </ul>
 
 </div>
@@ -228,9 +256,7 @@ margin-top:40px;
 
 <li><a href="https://www.google.com/search?q=google+ai+news" target="_blank">Google AI Developments</a></li>
 
-<li><a href="https://www.google.com/search?q=tech+news+world" target="_blank">Global Tech News</a></li>
-
-<li><a href="https://www.google.com/search?q=robotics+news" target="_blank">Robotics & Future Tech</a></li>
+<li><a href="https://www.google.com/search?q=global+tech+news" target="_blank">World Tech News</a></li>
 
 </ul>
 
@@ -239,6 +265,42 @@ margin-top:40px;
 </div>
 
 </div>
+
+<!-- MATERIALS -->
+
+<div class="subjects" id="materials">
+
+<h2>📚 Tutorials / Materials</h2>
+
+<ul>
+
+<li><a href="java.html">Java Programming</a></li>
+
+<li><a href="cisco.html">Cisco Networking</a></li>
+
+<li><a href="#">Add More Subjects Here</a></li>
+
+</ul>
+
+</div>
+
+<!-- AI BOT -->
+
+<div class="chatbot" onclick="openAI()">
+
+🤖
+
+</div>
+
+<script>
+
+function openAI(){
+
+window.open("https://chat.openai.com","_blank");
+
+}
+
+</script>
 
 <!-- FOOTER -->
 
