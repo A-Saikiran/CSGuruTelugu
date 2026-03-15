@@ -1,143 +1,432 @@
-<div class="materials" id="resources">
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSGuruTelugu</title>
 
-<h2>🇮🇳 Government of India Free Learning Portals</h2>
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background: linear-gradient(270deg,#1e3c72,#2a5298,#1e3c72);
+background-size:400% 400%;
+animation:bgmove 12s infinite;
+color:white;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* TOP BAR */
+
+.topbar{
+background:black;
+padding:8px;
+text-align:center;
+font-size:14px;
+}
+
+/* MENU */
+
+.navbar{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:#ffcc00;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:25px;
+}
+
+.logo{
+width:80px;
+margin-right:20px;
+border-radius:10px;
+}
+
+.title{
+font-size:50px;
+font-weight:bold;
+background: linear-gradient(90deg,#ffcc00,#ff0066);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* YOUTUBE */
+
+.youtube{
+text-align:center;
+margin-top:10px;
+}
+
+.youtube a{
+background:red;
+color:white;
+padding:12px 22px;
+text-decoration:none;
+font-size:18px;
+border-radius:8px;
+}
+
+/* MAIN LAYOUT */
+
+.container{
+display:flex;
+margin:30px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* CARDS */
+
+.card{
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+flex:1;
+min-width:300px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+transition:transform 0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* SCROLL */
+
+.scroll{
+height:250px;
+overflow:hidden;
+position:relative;
+}
+
+.scroll ul{
+position:absolute;
+animation:scroll 15s linear infinite;
+}
+
+.scroll li{
+margin:15px 0;
+}
+
+.scroll a{
+text-decoration:none;
+color:#0066cc;
+font-weight:bold;
+}
+
+@keyframes scroll{
+0%{top:100%;}
+100%{top:-100%;}
+}
+
+/* MATERIALS */
+
+.materials{
+background:white;
+color:black;
+margin:30px;
+padding:20px;
+border-radius:10px;
+}
+
+.materials h2{
+color:#2a5298;
+}
+
+.materials ul{
+list-style:none;
+padding:0;
+}
+
+.materials li{
+margin:12px 0;
+font-size:18px;
+}
+
+.materials a{
+text-decoration:none;
+color:#0066cc;
+font-weight:bold;
+}
+
+.materials a:hover{
+color:red;
+}
+
+/* AI BOT */
+
+.chatbot{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff0066;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+background:black;
+text-align:center;
+padding:20px;
+margin-top:40px;
+width:100%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- DATE TIME -->
+
+<div class="topbar">
+<span id="datetime"></span>
+</div>
+
+<!-- MENU -->
+
+<div class="navbar">
+
+<a href="#">Home</a>
+<a href="ugcnet.html">UGCNET / TGSET</a>
+<a href="#resources">Free Resources</a>
+<a href="#materials">Tutorials</a>
+<a href="about.html">About</a>
+
+</div>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<img src="LOGO.jpg" class="logo">
+
+<div class="title" id="typing"></div>
+
+</div>
+
+<!-- YOUTUBE -->
+
+<div class="youtube">
+
+<a href="https://www.youtube.com/@CSGuruTelugu" target="_blank">
+▶ Visit My YouTube Channel
+</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+<!-- JOBS -->
+
+<div class="card">
+
+<h2>🔥 Latest Job Updates (Official)</h2>
+
+<div class="scroll">
 
 <ul>
 
-<li>
-<a href="https://swayam.gov.in/" target="_blank">
-SWAYAM – Government of India Online Courses
-</a>
-</li>
+<li><a href="https://www.ncs.gov.in/" target="_blank">National Career Service (Govt Jobs)</a></li>
 
-<li>
-<a href="https://nptel.ac.in/" target="_blank">
-NPTEL – IIT & IISc Online Courses
-</a>
-</li>
+<li><a href="https://ssc.nic.in/" target="_blank">SSC Recruitment Portal</a></li>
 
-<li>
-<a href="https://diksha.gov.in/" target="_blank">
-DIKSHA – National Digital Education Platform
-</a>
-</li>
+<li><a href="https://www.ibps.in/" target="_blank">IBPS Bank Jobs</a></li>
 
-<li>
-<a href="https://ndl.iitkgp.ac.in/" target="_blank">
-National Digital Library of India
-</a>
-</li>
+<li><a href="https://www.rrbcdg.gov.in/" target="_blank">Railway Recruitment Board</a></li>
 
-<li>
-<a href="https://spoken-tutorial.org/" target="_blank">
-Spoken Tutorial – IIT Bombay Free Training
-</a>
-</li>
+<li><a href="https://careers.google.com/" target="_blank">Google Careers</a></li>
 
-<li>
-<a href="https://www.aicte-india.org/" target="_blank">
-AICTE Training & Internship Portals
-</a>
-</li>
+<li><a href="https://www.amazon.jobs/" target="_blank">Amazon Jobs</a></li>
 
 </ul>
 
+</div>
+
+</div>
+
+<!-- TECH NEWS -->
+
+<div class="card">
+
+<h2>🌍 Tech & AI News</h2>
+
+<div class="scroll">
+
+<ul>
+
+<li><a href="https://news.google.com/search?q=Artificial+Intelligence" target="_blank">Latest AI News</a></li>
+
+<li><a href="https://news.google.com/search?q=technology" target="_blank">Global Technology News</a></li>
+
+<li><a href="https://openai.com/blog" target="_blank">OpenAI Updates</a></li>
+
+<li><a href="https://ai.googleblog.com/" target="_blank">Google AI Blog</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- TUTORIALS -->
+
+<div class="materials" id="materials">
+
+<h2>📚 Tutorials / Materials</h2>
+
+<ul>
+
+<li><a href="java.html">Java Programming</a></li>
+
+<li><a href="cisco.html">Cisco Networking</a></li>
+
+</ul>
+
+</div>
+
+<!-- FREE RESOURCES -->
+
+<div class="materials" id="resources">
+
+<h2>🇮🇳 Government of India Learning Portals</h2>
+
+<ul>
+
+<li><a href="https://swayam.gov.in/" target="_blank">SWAYAM Online Courses</a></li>
+
+<li><a href="https://nptel.ac.in/" target="_blank">NPTEL IIT Courses</a></li>
+
+<li><a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library</a></li>
+
+<li><a href="https://diksha.gov.in/" target="_blank">DIKSHA Learning Platform</a></li>
+
+<li><a href="https://spoken-tutorial.org/" target="_blank">IIT Spoken Tutorial</a></li>
+
+</ul>
 
 <h2>🏛 State Government Learning Portals</h2>
 
 <ul>
 
-<li>
-<a href="https://tsat.telangana.gov.in/" target="_blank">
-Telangana TSAT Learning Platform
-</a>
-</li>
+<li><a href="https://tsat.telangana.gov.in/" target="_blank">TSAT Telangana Learning</a></li>
 
-<li>
-<a href="https://www.apsche.org/" target="_blank">
-AP State Council of Higher Education
-</a>
-</li>
-
-<li>
-<a href="https://diksha.gov.in/explore/state/telangana" target="_blank">
-Telangana DIKSHA Learning Portal
-</a>
-</li>
-
-<li>
-<a href="https://olabs.edu.in/" target="_blank">
-Virtual Labs for Schools (Indian Initiative)
-</a>
-</li>
+<li><a href="https://www.apsche.org/" target="_blank">AP Higher Education Portal</a></li>
 
 </ul>
-
 
 <h2>🌍 Global Free Learning Platforms</h2>
 
 <ul>
 
-<li>
-<a href="https://infyspringboard.onwingspan.com/" target="_blank">
-Infosys Springboard
-</a>
-</li>
+<li><a href="https://infyspringboard.onwingspan.com/" target="_blank">Infosys Springboard</a></li>
 
-<li>
-<a href="https://www.netacad.com/" target="_blank">
-Cisco Networking Academy
-</a>
-</li>
+<li><a href="https://www.netacad.com/" target="_blank">Cisco Networking Academy</a></li>
 
-<li>
-<a href="https://www.coursera.org/" target="_blank">
-Coursera Online Courses
-</a>
-</li>
+<li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
 
-<li>
-<a href="https://www.udemy.com/" target="_blank">
-Udemy Learning Platform
-</a>
-</li>
+<li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
 
-<li>
-<a href="https://www.edx.org/" target="_blank">
-edX University Courses
-</a>
-</li>
+<li><a href="https://www.edx.org/" target="_blank">edX Courses</a></li>
 
-<li>
-<a href="https://learndigital.withgoogle.com/digitalgarage" target="_blank">
-Google Digital Garage
-</a>
-</li>
+<li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn</a></li>
 
-<li>
-<a href="https://learn.microsoft.com/" target="_blank">
-Microsoft Learn
-</a>
-</li>
+<li><a href="https://aws.amazon.com/training/" target="_blank">AWS Training</a></li>
 
-<li>
-<a href="https://aws.amazon.com/training/" target="_blank">
-AWS Training & Certification
-</a>
-</li>
+<li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
 
-<li>
-<a href="https://www.khanacademy.org/" target="_blank">
-Khan Academy
-</a>
-</li>
-
-<li>
-<a href="https://ocw.mit.edu/" target="_blank">
-MIT OpenCourseWare
-</a>
-</li>
+<li><a href="https://ocw.mit.edu/" target="_blank">MIT OpenCourseWare</a></li>
 
 </ul>
 
 </div>
+
+<!-- AI BOT -->
+
+<div class="chatbot" onclick="openAI()">🤖</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 CSGuruTelugu | All Rights Reserved
+
+</div>
+
+<script>
+
+/* DATE TIME */
+
+function updateTime(){
+let now=new Date();
+document.getElementById("datetime").innerHTML=now.toLocaleString();
+}
+
+setInterval(updateTime,1000);
+
+/* TYPING TITLE */
+
+let text="CSGuruTelugu";
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,120);
+
+}
+
+}
+
+typing();
+
+/* AI BUTTON */
+
+function openAI(){
+
+window.open("https://chat.openai.com","_blank");
+
+}
+
+</script>
+
+</body>
+</html>
