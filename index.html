@@ -3,168 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSGuruTelugu | Official Education Hub 2026</title>
+    <title>CSGuruTelugu | Official Academic Portal</title>
+    <!-- Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <style>
         :root {
-            --primary: #003366; /* Swayam Navy */
-            --secondary: #ff9900; /* Vibrant Orange */
-            --accent: #e60000; /* YouTube Red */
-            --bg: #f0f2f5;
-            --text: #1a1a1a;
+            --primary: #002b5c; 
+            --secondary: #ff9900; 
+            --bg: #f8fafc;
+            --superb-grad: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #9932cc);
         }
 
-        body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        body { margin: 0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: #1e293b; line-height: 1.6; }
 
-        /* VIBRANT TOP BAR */
-        .top-nav { background: #000; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 13px; border-bottom: 3px solid var(--secondary); }
+        /* HEADER: LOGO LEFT, NARROW WIDTH */
+        header {
+            background: #ffffff;
+            padding: 15px 0;
+            border-bottom: 3px solid transparent;
+            border-image: var(--superb-grad) 1;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-section { display: flex; align-items: center; gap: 15px; }
+        .logo-img { width: 75px; height: 75px; border-radius: 50%; border: 2px solid #eee; object-fit: cover; }
         
-        /* FANTASTIC TITLE DESIGN */
-        .brand-header { background: #fff; padding: 20px 5%; display: flex; align-items: center; justify-content: center; gap: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .logo { width: 85px; height: 85px; border-radius: 50%; border: 3px solid var(--primary); }
-        .title-text { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -1px; background: linear-gradient(90deg, #003366, #ff9900, #e60000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 2px 2px 4px rgba(0,0,0,0.05); }
+        .brand-text h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin: 0;
+            font-weight: 900;
+            background: var(--superb-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .tagline { font-size: 0.8rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+        .clock-box { text-align: right; font-weight: 700; color: var(--primary); }
 
         /* NAVIGATION */
-        nav { background: var(--primary); display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; padding: 15px 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
-        nav a:hover { background: var(--secondary); }
+        nav { background: var(--primary); display: flex; justify-content: center; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
+        nav a { color: #fff; padding: 15px 20px; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { background: var(--secondary); color: #000; }
 
-        /* COLORFUL BULLETIN BOARD */
-        .bulletin-container { background: #fff3e0; padding: 12px 0; border-bottom: 1px solid #ffe0b2; overflow: hidden; }
-        .ticker { display: inline-block; white-space: nowrap; animation: marquee 35s linear infinite; font-weight: bold; color: #d32f2f; font-size: 16px; }
-        @keyframes marquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+        /* NEWS TICKER */
+        .ticker-wrap {
+            background: #fee2e2;
+            padding: 10px 0;
+            border-bottom: 1px solid #fecaca;
+            overflow: hidden;
+            white-space: nowrap;
+        }
 
-        /* YOUTUBE CHANNEL SECTION */
-        .yt-section { background: #fff; border: 2px solid var(--accent); margin: 20px 5%; padding: 20px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; }
-        .yt-btn { background: var(--accent); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .yt-btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(230,0,0,0.4); }
+        .ticker-text {
+            display: inline-block;
+            animation: scroll 40s linear infinite;
+            font-weight: 800;
+            color: #b91c1c;
+            font-size: 15px;
+        }
 
-        /* MAIN LAYOUT */
-        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; padding: 0 5% 40px; margin-top: 30px; }
-        .card { background: white; border-radius: 12px; padding: 0; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 5px solid var(--primary); }
-        .card-title { background: #f8f9fa; padding: 15px 20px; font-weight: 800; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
-        .list-item { padding: 15px 20px; border-bottom: 1px solid #f1f1f1; display: flex; justify-content: space-between; align-items: center; }
-        .list-item a { text-decoration: none; color: #0056b3; font-weight: 600; }
-        .badge { font-size: 11px; padding: 4px 8px; border-radius: 4px; background: #e3f2fd; color: #1976d2; font-weight: bold; }
+        @keyframes scroll { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
 
-        /* CAREER UPDATES PANEL */
-        .career-updates { background: #e8f5e9; border-top-color: #2e7d32; }
+        /* MAIN BODY */
+        .main-wrapper { max-width: 1100px; margin: 30px auto; padding: 0 20px 40px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        .card { background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; margin-bottom: 25px; border-top: 5px solid var(--primary); }
+        .card-header { background: #f8fafc; padding: 15px 20px; font-weight: 800; border-bottom: 1px solid #eee; color: var(--primary); }
 
-        @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .yt-section { flex-direction: column; text-align: center; gap: 15px; } }
+        .list-item { padding: 15px 20px; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center; }
+        .list-item a { text-decoration: none; color: #2563eb; font-weight: 700; }
+        .badge { font-size: 10px; padding: 4px 8px; border-radius: 4px; font-weight: 900; text-transform: uppercase; background: #e2e8f0; color: #475569; }
+        .badge-urgent { background: #fee2e2; color: #b91c1c; animation: blink 1.5s infinite; }
+        @keyframes blink { 50% { opacity: 0.5; } }
+
+        /* YOUTUBE HUB */
+        .yt-hub {
+            max-width: 1060px;
+            background: #fff;
+            margin: 20px auto 40px;
+            padding: 20px 30px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-bottom: 5px solid #ff0000;
+        }
+
+        .yt-btn {
+            background: var(--superb-grad);
+            color: #fff !important;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 5px solid var(--secondary);
+        }
+
+        .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
+        .social-icons a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
+        .social-icons a:hover { color: var(--secondary); transform: translateY(-5px); }
+
+        .footer-credit { font-size: 1.1rem; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; }
+        .verified-tag { background: #16a34a; color: white; font-size: 10px; padding: 3px 10px; border-radius: 20px; }
+
+        @media (max-width: 850px) { .main-wrapper { grid-template-columns: 1fr; } .header-container, .yt-hub { flex-direction: column; text-align: center; } .clock-box { margin-top: 10px; } }
     </style>
 </head>
 <body>
 
-<div class="top-nav">
-    <div id="live-clock">Loading...</div>
-    <div>🇮🇳 Official Indian Education Gateway</div>
-</div>
+<header>
+    <div class="header-container">
+        <div class="brand-section">
+            <img src="LOGO.jpg" alt="Logo" class="logo-img">
+            <div class="brand-text">
+                <h1>CSGuruTelugu</h1>
+                <div class="tagline">Verified Academic & Career Hub</div>
+            </div>
+        </div>
+        <div class="clock-box">
+            <div id="ist-date" style="color:var(--secondary)"></div>
+            <div id="ist-time" style="font-size: 1.2rem;"></div>
+        </div>
+    </div>
+</header>
 
-<div class="brand-header">
-    <img src="LOGO.jpg" alt="Logo" class="logo">
-    <div class="title-text">CSGuruTelugu</div>
+<div class="ticker-wrap">
+    <div class="ticker-text">
+        📢 Verified March 2026: GATE Results on March 19 • TGSET Results Expected March 18-20 • TG EAPCET Last Date April 4 • UGC NET Notification coming in April • New Tutorials Live!
+    </div>
 </div>
 
 <nav>
-    <a href="#">HOME</a>
-    <a href="#tgcets">TG CETs 2026</a>
-    <a href="#hub">LEARNING HUB</a>
-    <a href="#career">CAREER UPDATES</a>
+    <a href="index.html">Home</a>
+    <a href="ugcnet.html">UGC NET / GATE</a>
+    <a href="tgset.html">TGSET 2026</a>
+    <a href="telangana.html">TG Portals</a>
+    <a href="java.html">Java</a>
+    <a href="cisco.html">Cisco</a>
 </nav>
 
-<div class="bulletin-container">
-    <div class="ticker" id="tgcet-ticker">
-        • Loading Latest TG CET Updates... • Official Notification: TG EAPCET Registration open until April 4 • TG ICET Exams on May 13-14 • TG EDCET Exam Date: May 12, 2026 • TG LAWCET confirmed for May 18
-    </div>
-</div>
+<main class="main-wrapper">
+    <div class="main-content">
+        <section class="card">
+            <div class="card-header">🚀 TG CET Tracker 2026 (Live Updates)</div>
+            <div id="tg-list"></div>
+        </section>
 
-<div class="yt-section">
-    <div>
-        <h3 style="margin:0; color:var(--accent);">Official YouTube Channel</h3>
-        <p style="margin:5px 0 0; color:#666;">Subscribe for tutorials, exam tips, and real-time updates.</p>
+        <section class="card">
+            <div class="card-header">🏆 National Exam Hub (GATE/NET)</div>
+            <div id="nat-list"></div>
+        </section>
     </div>
-    <a href="https://www.youtube.com" target="_blank" class="yt-btn">
-        <img src="https://upload.wikimedia.org" height="20" alt="">
-        VISIT CSGURU TELUGU
-    </a>
-</div>
 
-<main class="grid">
-    <div class="left-col">
-        <section class="card" id="tgcets">
-            <div class="card-title">🚀 Telangana State CETs 2026 Schedule</div>
-            <div id="cet-list">
-                <!-- Data populated by JS -->
+    <aside class="sidebar">
+        <div class="card" style="border-top-color: #16a34a;">
+            <div class="card-header" style="color:#16a34a;">🔥 Verified Careers</div>
+            <div style="padding:15px; font-size:0.9rem;">
+                <p><b>SSC CGL 2026:</b> Monitoring ssc.gov.in.</p>
+                <hr>
+                <p><b>IBPS 2026:</b> Calendar active at ibps.in.</p>
+                <hr>
+                <p><b>TGPSC:</b> Updates live on tspsc.gov.in.</p>
             </div>
-        </section>
-
-        <section class="card" id="hub">
-            <div class="card-title">📚 Unified Learning Hub (Materials & Resources)</div>
-            <div class="list-item"><a href="https://swayam.gov.in" target="_blank">SWAYAM - Free Online Courses</a><span class="badge">GOVT</span></div>
-            <div class="list-item"><a href="https://nptel.ac.in" target="_blank">NPTEL - IIT/IISc Tutorials</a><span class="badge">GOVT</span></div>
-            <div class="list-item"><a href="https://diksha.gov.in" target="_blank">DIKSHA - School Resources</a><span class="badge">K-12</span></div>
-            <div class="list-item"><a href="java.html">Java Programming Full Course</a><span class="badge">TUTORIAL</span></div>
-            <div class="list-item"><a href="cisco.html">Networking & Cisco Materials</a><span class="badge">TECH</span></div>
-        </section>
-    </div>
-
-    <div class="right-col">
-        <section class="card career-updates" id="career">
-            <div class="card-title" style="color:#1b5e20;">🔥 Latest Career Updates</div>
-            <div id="career-list" style="padding:10px;">
-                <!-- Updated by JS -->
-            </div>
-        </section>
-    </div>
+        </div>
+    </aside>
 </main>
 
+<div class="yt-hub">
+    <div style="display:flex; align-items:center; gap:15px;">
+        <i class="fab fa-youtube" style="font-size:2.5rem; color:#ff0000;"></i>
+        <div style="text-align:left;">
+            <strong style="font-size:1.1rem; color:#ff0000;">CSGuruTelugu Official</strong>
+            <p style="margin:0; font-size:0.85rem; color:#666;">Channel ID: UC7wZuEkc80xzrTKPeMt683Q</p>
+        </div>
+    </div>
+    <a href="https://www.youtube.com" target="_blank" class="yt-btn">SUBSCRIBE NOW</a>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:csgurutelugu@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://telegram.me" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+    <div class="footer-credit">
+        © 2026 CSGuruTelugu 
+        <span class="verified-tag">✓ Verified Gateway</span>
+    </div>
+</footer>
+
 <script>
-    // AUTOMATIC CLOCK
-    function startClock() {
-        setInterval(() => {
-            document.getElementById('live-clock').innerText = new Date().toLocaleString();
-        }, 1000);
+    // IST Clock
+    function updateClock() {
+        const now = new Date();
+        const d = String(now.getDate()).padStart(2, '0');
+        const m = String(now.getMonth() + 1).padStart(2, '0');
+        const y = now.getFullYear();
+        document.getElementById('ist-date').innerText = `${d}-${m}-${y}`;
+        document.getElementById('ist-time').innerText = now.toLocaleTimeString('en-IN', { hour12: true });
     }
+    setInterval(updateClock, 1000); updateClock();
 
-    // VERIFIED DATA FOR MARCH 2026
-    const cetData = [
-        { name: "TG EAPCET (Eng/Agri)", date: "May 4-11, 2026", status: "Apply by Apr 4", link: "https://eapcet.tgche.ac.in/" },
-        { name: "TG ICET (MBA/MCA)", date: "May 13-14, 2026", status: "Apply by Mar 16", link: "https://icet.tgche.ac.in/" },
-        { name: "TG EDCET (B.Ed)", date: "May 12, 2026", status: "Apply by Apr 15", link: "https://edcet.tgche.ac.in/" },
-        { name: "TG LAWCET (Law)", date: "May 18, 2026", status: "Apply by Apr 1", link: "https://lawcet.tgche.ac.in/" },
-        { name: "TS POLYCET (Poly)", date: "May 13, 2026", status: "Registration Open", link: "https://polycetts.nic.in" }
+    // 2026 Data Engine
+    const tgExams = [
+        { name: "TGSET Results 2025/26", date: "2026-03-18", info: "Expected March 18-20", link: "http://telanganaset.org" },
+        { name: "TG EAPCET 2026", date: "2026-04-04", info: "Last Date: April 4", link: "https://eapcet.tgche.ac.in" },
+        { name: "TG ICET (MBA/MCA)", date: "2026-05-13", info: "Exam: May 13-14", link: "https://icet.tgche.ac.in" }
+    ];
+    const natExams = [
+        { name: "GATE 2026 Results", date: "2026-03-19", info: "IITG Result: March 19", link: "https://gate2026.iitg.ac.in" },
+        { name: "UGC NET June 2026", date: "2026-04-15", info: "Notice: Expected April", link: "https://ugcnet.nta.nic.in" }
     ];
 
-    const careerData = [
-        "SSC CGL 2026 - Official Notification Pending",
-        "IBPS Bank Exams - Calendar Released for 2026-27",
-        "TGPSC Group Update - Verification Ongoing",
-        "UPSC CSE 2026 - Registration Closed"
-    ];
-
-    function populateData() {
-        const cetList = document.getElementById('cet-list');
-        cetList.innerHTML = cetData.map(c => `
-            <div class="list-item">
-                <div>
-                    <a href="${c.link}" target="_blank">${c.name}</a><br>
-                    <small style="color:#666;">Exam: ${c.date}</small>
-                </div>
-                <span class="badge">${c.status}</span>
-            </div>
-        `).join('');
-
-        const careerList = document.getElementById('career-list');
-        careerList.innerHTML = careerData.map(j => `
-            <div style="background:white; margin:10px 0; padding:10px; border-radius:6px; font-size:13px; border-left:4px solid #2e7d32;">
-                <b>${j}</b>
-            </div>
-        `).join('');
+    function render(data, id) {
+        const now = new Date();
+        document.getElementById(id).innerHTML = data.map(x => {
+            const exDate = new Date(x.date);
+            const urgent = (exDate - now) < (5 * 24 * 60 * 60 * 1000);
+            return `<div class="list-item"><div><a href="${x.link}" target="_blank">${x.name}</a><br><small>${x.info}</small></div><span class="badge ${urgent?'badge-urgent':''}">Active</span></div>`;
+        }).join('');
     }
-
-    window.onload = () => {
-        startClock();
-        populateData();
-    };
+    render(tgExams, 'tg-list'); render(natExams, 'nat-list');
 </script>
 
 </body>
