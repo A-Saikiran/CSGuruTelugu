@@ -12,89 +12,106 @@ background: linear-gradient(135deg,#1e3c72,#2a5298);
 color:white;
 }
 
+/* MENU BAR */
+
+.navbar{
+background:black;
+padding:15px;
+text-align:center;
+}
+
+.navbar a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:yellow;
+}
+
 /* HEADER */
 
 .header{
 display:flex;
 align-items:center;
 justify-content:center;
-padding:30px;
+padding:25px;
 }
 
 .logo{
-width:90px;
+width:80px;
 margin-right:20px;
 border-radius:10px;
 }
 
 .title{
-font-size:55px;
+font-size:50px;
 font-weight:bold;
 background: linear-gradient(90deg,#ffcc00,#ff0066);
 -webkit-background-clip:text;
 color:transparent;
 }
 
-/* YOUTUBE BUTTON */
+/* MAIN LAYOUT */
 
-.youtube{
-text-align:center;
-margin-top:20px;
+.container{
+display:flex;
+margin:30px;
 }
 
-.youtube a{
-background:red;
-color:white;
-padding:15px 25px;
-text-decoration:none;
-font-size:20px;
-border-radius:8px;
-}
-
-.youtube a:hover{
-background:#cc0000;
-}
-
-/* JOB SECTION */
+/* LEFT JOB SECTION */
 
 .jobs{
+flex:2;
 background:white;
 color:black;
-margin:40px;
 padding:20px;
 border-radius:10px;
-box-shadow:0 0 20px rgba(0,0,0,0.3);
+margin-right:20px;
 }
 
 .jobs h2{
 color:#2a5298;
 }
 
-/* SCROLLING JOB LIST */
+/* RIGHT NEWS SECTION */
 
-.job-list{
-height:200px;
+.news{
+flex:1;
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+}
+
+/* SCROLL LIST */
+
+.scroll{
+height:250px;
 overflow:hidden;
 position:relative;
 }
 
-.job-list ul{
+.scroll ul{
 position:absolute;
-animation:scroll 12s linear infinite;
+animation:scroll 15s linear infinite;
 }
 
-.job-list li{
+.scroll li{
 margin:15px 0;
 font-size:18px;
 }
 
-.job-list a{
+.scroll a{
 text-decoration:none;
 color:#0066cc;
 font-weight:bold;
 }
 
-.job-list a:hover{
+.scroll a:hover{
 color:red;
 }
 
@@ -103,13 +120,29 @@ color:red;
 100%{top:-100%;}
 }
 
+/* YOUTUBE BUTTON */
+
+.youtube{
+text-align:center;
+margin-top:10px;
+}
+
+.youtube a{
+background:red;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+font-size:18px;
+border-radius:8px;
+}
+
 /* FOOTER */
 
 .footer{
 text-align:center;
+background:black;
 padding:20px;
 margin-top:40px;
-background:black;
 }
 
 </style>
@@ -118,11 +151,25 @@ background:black;
 
 <body>
 
+<!-- MENU -->
+
+<div class="navbar">
+
+<a href="#">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="tech.html">Tech News</a>
+<a href="about.html">About</a>
+
+</div>
+
 <!-- HEADER -->
 
 <div class="header">
+
 <img src="LOGO.jpg" class="logo">
+
 <div class="title">CSGuruTelugu</div>
+
 </div>
 
 <div class="youtube">
@@ -133,13 +180,17 @@ background:black;
 
 </div>
 
-<!-- JOB UPDATES -->
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+<!-- JOBS -->
 
 <div class="jobs">
 
-<h2>🔥 Latest Job Updates India (Software + Govt)</h2>
+<h2>🔥 Latest Job Updates</h2>
 
-<div class="job-list">
+<div class="scroll">
 
 <ul>
 
@@ -147,17 +198,43 @@ background:black;
 
 <li><a href="https://www.google.com/search?q=Infosys+jobs+2026" target="_blank">Infosys Recruitment</a></li>
 
-<li><a href="https://www.google.com/search?q=Google+internship+2026" target="_blank">Google Internship</a></li>
+<li><a href="https://www.google.com/search?q=Amazon+developer+jobs" target="_blank">Amazon Developer Jobs</a></li>
 
-<li><a href="https://www.google.com/search?q=Amazon+developer+jobs" target="_blank">Amazon Hiring Developers</a></li>
+<li><a href="https://www.google.com/search?q=Wipro+careers" target="_blank">Wipro Careers</a></li>
 
-<li><a href="https://www.google.com/search?q=Wipro+careers+2026" target="_blank">Wipro Careers</a></li>
-
-<li><a href="https://www.google.com/search?q=government+jobs+india+2026" target="_blank">Latest Government Jobs India</a></li>
+<li><a href="https://www.google.com/search?q=government+jobs+india" target="_blank">Latest Government Jobs India</a></li>
 
 <li><a href="https://www.google.com/search?q=software+jobs+for+freshers+india" target="_blank">Software Jobs For Freshers</a></li>
 
 </ul>
+
+</div>
+
+</div>
+
+<!-- TECH NEWS -->
+
+<div class="news">
+
+<h2>🌍 Tech & AI News</h2>
+
+<div class="scroll">
+
+<ul>
+
+<li><a href="https://www.google.com/search?q=latest+ai+news" target="_blank">Latest AI Innovations</a></li>
+
+<li><a href="https://www.google.com/search?q=openai+news" target="_blank">OpenAI Updates</a></li>
+
+<li><a href="https://www.google.com/search?q=google+ai+news" target="_blank">Google AI Developments</a></li>
+
+<li><a href="https://www.google.com/search?q=tech+news+world" target="_blank">Global Tech News</a></li>
+
+<li><a href="https://www.google.com/search?q=robotics+news" target="_blank">Robotics & Future Tech</a></li>
+
+</ul>
+
+</div>
 
 </div>
 
