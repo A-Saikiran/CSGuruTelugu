@@ -1,137 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UGC NET Official Hub | CSGURU TELUGU</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; color: #1e293b; }
-        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.8); transition: all 0.3s ease; }
-        .glass-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        .status-badge { animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        .hero-gradient { background: linear-gradient(135deg, #064e3b 0%, #065f46 100%); } /* Dark Green for UGC Style */
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGC NET | CSGuruTelugu</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* 🔥 BODY */
+body {
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:#f5f7fb;
+  color:#0f172a;
+}
+
+/* 🔥 HEADER */
+header {
+  background:#ffffff;
+  padding:15px 0;
+  border-bottom:2px solid #e2e8f0;
+}
+
+.header-container {
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand-section {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-img {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+}
+
+.brand-text h1 {
+  margin:0;
+  font-size:1.8rem;
+}
+
+.tagline {
+  font-size:0.7rem;
+  color:#64748b;
+}
+
+/* 🔥 NAVBAR */
+.menu-3d {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:12px;
+  background:#0f172a;
+}
+
+.menu-3d a {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#cbd5e1;
+  background:#1e293b;
+  padding:10px;
+  border-radius:10px;
+  font-size:12px;
+  transition:0.3s;
+}
+
+.menu-3d a:hover {
+  background:#4f46e5;
+  color:#fff;
+}
+
+/* 🔥 SUBMENU */
+.has-submenu {
+  position:relative;
+}
+
+.submenu {
+  position:absolute;
+  top:110%;
+  left:0;
+  background:#1e293b;
+  border-radius:8px;
+  min-width:140px;
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.has-submenu:hover .submenu {
+  opacity:1;
+  pointer-events:auto;
+}
+
+.submenu a {
+  display:block;
+  padding:10px;
+  color:#cbd5e1;
+}
+
+/* 🔥 HERO */
+.hero {
+  background: linear-gradient(135deg,#0f172a,#4f46e5);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1 {
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.hero p {
+  color:#cbd5e1;
+}
+
+/* 🔥 CONTENT */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:#4f46e5;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:12px;
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-        <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">CS</div>
-        <div class="text-xl font-extrabold tracking-tight text-slate-800 uppercase">GURU<span class="text-emerald-600">TELUGU</span></div>
-    </div>
-    <div class="hidden md:flex gap-6 font-bold text-xs uppercase tracking-widest text-slate-500">
-        <a href="index.html" class="hover:text-emerald-600 transition">Home</a>
-        <a href="#updates" class="hover:text-emerald-600 transition">Exam Updates</a>
-        <a href="#resources" class="hover:text-emerald-600 transition">Study Material</a>
-    </div>
-</nav>
+<!-- ✅ HEADER -->
+<header>
+  <div class="header-container">
 
-<!-- Hero Section -->
-<header class="hero-gradient text-white py-16 px-8 text-center relative overflow-hidden">
-    <div class="relative z-10">
-        <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tighter uppercase">UGC NET <span class="text-emerald-300">June 2026</span></h1>
-        <p class="text-emerald-100 text-lg max-w-2xl mx-auto">National Eligibility Test for Junior Research Fellowship (JRF) & Assistant Professor.</p>
-        <div class="mt-6 inline-block px-4 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-200 font-mono text-sm">
-            Portal Updated: March 16, 2026
-        </div>
+    <div class="brand-section">
+      <img src="LOGO.jpg" class="logo-img">
+      <div class="brand-text">
+        <h1>CSGuruTelugu</h1>
+        <span class="tagline">Learn Today. Lead Tomorrow.</span>
+      </div>
     </div>
+
+  </div>
 </header>
 
-<main class="max-w-6xl mx-auto px-6 py-12">
-    
-    <!-- 1. LATEST UPDATES: NOTIFICATION & DATES -->
-    <section id="updates" class="mb-16">
-        <div class="flex items-center gap-3 mb-8">
-            <div class="p-2 bg-emerald-600 rounded-lg text-white font-bold">📢</div>
-            <h2 class="text-2xl font-black">UGC NET June 2026 Cycle Updates</h2>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- Registration Status -->
-            <div class="glass-card p-8 rounded-[32px] border-l-8 border-orange-500">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold">June 2026 Notification</h3>
-                    <span class="status-badge bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Expect Soon</span>
-                </div>
-                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
-                    The **UGC NET June 2026 Notification** is expected to be released by **NTA** in the **first week of April 2026**. Online applications usually remain open for 30 days.
-                </p>
-                <a href="https://ugcnet.nta.nic.in" target="_blank" class="text-emerald-600 font-bold text-sm hover:underline">Official NTA Portal →</a>
-            </div>
+<!-- ✅ NAVBAR -->
+<nav class="menu-3d">
 
-            <!-- Exam Schedule -->
-            <div class="glass-card p-8 rounded-[32px] border-l-8 border-emerald-600">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold">Tentative Exam Dates</h3>
-                    <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">Schedule</span>
-                </div>
-                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
-                    The examination for the June cycle is tentatively scheduled to be held between **June 10 and June 21, 2026**. Exams will be conducted in **CBT (Computer Based Test)** mode across India.
-                </p>
-                <div class="text-[10px] font-bold text-slate-400">CONDUCTED BY NATIONAL TESTING AGENCY (NTA)</div>
-            </div>
-        </div>
-    </section>
+  <a href="index.html"><i class="fas fa-home"></i><p>Home</p></a>
 
-    <!-- 2. EXAM PURPOSE -->
-    <section class="mb-16 bg-white p-10 rounded-[40px] shadow-sm">
-        <h2 class="text-2xl font-black mb-6">Objective of UGC NET</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div>
-                <h4 class="font-bold text-emerald-600 mb-2">JRF Fellowship</h4>
-                <p class="text-sm text-slate-500">Qualifying for **Junior Research Fellowship** provides financial assistance for Ph.D. research in Indian universities.</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-emerald-600 mb-2">Assistant Professor</h4>
-                <p class="text-sm text-slate-500">Essential qualification for recruitment as **Assistant Professor** in all Indian Colleges and Universities.</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-emerald-600 mb-2">PhD Admissions</h4>
-                <p class="text-sm text-slate-500">UGC NET scores are now increasingly used for direct **Ph.D. admissions** without separate entrance tests.</p>
-            </div>
-        </div>
-    </section>
+  <div class="has-submenu">
+    <a href="#"><i class="fas fa-graduation-cap"></i><p>Exams</p></a>
+    <div class="submenu">
+      <a href="ugcnet.html" target="_blank">UGC NET</a>
+      <a href="tgset.html" target="_blank">TG SET</a>
+      <a href="gate.html" target="_blank">GATE</a>
+    </div>
+  </div>
 
-    <!-- 3. FREE STUDY RESOURCES -->
-    <section id="resources">
-        <div class="flex items-center gap-3 mb-8">
-            <div class="p-2 bg-slate-800 rounded-lg text-white">📖</div>
-            <h2 class="text-2xl font-black">Free Preparation Resources</h2>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- PYQs -->
-            <div class="glass-card p-6 rounded-3xl text-center">
-                <div class="text-3xl mb-4">📂</div>
-                <h4 class="font-bold mb-2">Paper I & II PYQs</h4>
-                <p class="text-xs text-slate-500 mb-4">Download official Previous Year Question Papers with Answer Keys from NTA Archive.</p>
-                <a href="https://www.nta.ac.in" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold block">Download Papers</a>
-            </div>
-            <!-- Mock Test -->
-            <div class="glass-card p-6 rounded-3xl text-center">
-                <div class="text-3xl mb-4">✍️</div>
-                <h4 class="font-bold mb-2">NTA Mock Tests</h4>
-                <p class="text-xs text-slate-500 mb-4">Practice on the actual NTA exam interface to improve speed and accuracy.</p>
-                <a href="https://nta.ac.in" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold block">Start Mock Test</a>
-            </div>
-            <!-- Notes -->
-            <div class="glass-card p-6 rounded-3xl text-center">
-                <div class="text-3xl mb-4">📍</div>
-                <h4 class="font-bold mb-2">Syllabus PDF</h4>
-                <p class="text-xs text-slate-500 mb-4">Access the latest updated syllabus for General Paper I and all 83 subjects.</p>
-                <a href="https://www.ugcnetonline.in" target="_blank" class="bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold block">View Syllabus</a>
-            </div>
-        </div>
-    </section>
-</main>
+  <a href="#"><i class="fas fa-video"></i><p>Tutorials</p></a>
+  <a href="#"><i class="fas fa-book"></i><p>Resources</p></a>
 
-<footer class="bg-slate-950 py-10 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
-    CSGURU TELUGU | Verified UGC NET Portal 2026
-</footer>
+  <a href="telangana.html" target="_blank">
+    <i class="fas fa-map-marker-alt"></i><p>Telangana</p>
+  </a>
+
+</nav>
+
+<!-- 🔥 HERO -->
+<section class="hero">
+  <h1>UGC NET 2026</h1>
+  <p>Complete preparation platform for JRF & Assistant Professor</p>
+</section>
+
+<!-- 🔥 CONTENT -->
+<div class="container">
+
+  <div class="card">
+    <h2>📢 Latest Updates</h2>
+    <p>Notification expected in April 2026. Exam in June 2026.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📘 Syllabus</h3>
+      <p>Download updated syllabus for all subjects.</p>
+      <a href="https://www.ugcnetonline.in" target="_blank" class="btn">View</a>
+    </div>
+
+    <div class="card">
+      <h3>📂 Previous Papers</h3>
+      <p>Practice with official PYQs.</p>
+      <a href="https://www.nta.ac.in" target="_blank" class="btn">Download</a>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Mock Tests</h3>
+      <p>Improve speed and accuracy.</p>
+      <a href="https://nta.ac.in" target="_blank" class="btn">Start</a>
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 </html>
