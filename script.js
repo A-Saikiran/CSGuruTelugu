@@ -126,27 +126,15 @@ function updateClock() {
     const clockBox = document.getElementById('clock-box');
     const now = new Date();
 
-    // Get day name
-    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const day = dayNames[now.getDay()];
-
-    // Format date: DD-MM-YYYY
+    // Format date: YYYY-MM-DD
     const date = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 
     // Format time: HH:MM:SS
     const time = now.toLocaleTimeString('en-GB');
 
-    // Set HTML with spans for different colors
-    clockBox.innerHTML = `
-        <span class="day">${day}</span>
-        <span class="date">${date}</span>
-        <span class="time">${time}</span>
-    `;
+    // Set HTML with spans for styling
+    clockBox.innerHTML = `<span class="date">${date}</span><span class="time">${time}</span>`;
 }
-
-// Update every second
-setInterval(updateClock, 1000);
-updateClock(); // initial call
 
 // Update every second
 setInterval(updateClock, 1000);
