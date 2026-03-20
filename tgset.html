@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGSET Official Hub | CSGURU TELUGU</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- ✅ FIXED CSS -->
+<style>
+
+/* 🌿 BASE */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f6f8fc;
+  color: #0f172a;
+}
+
+/* ✨ GLASS CARD */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 24px;
+  transition: all 0.25s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* 🔥 HERO */
+.hero-gradient {
+  background: linear-gradient(135deg,#0f172a 0%,#1e293b 40%,#6366f1 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(99,102,241,0.25), transparent 60%);
+}
+
+/* TEXT */
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+/* BUTTON */
+.btn-modern {
+  background: #6366f1;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-modern:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">CS</div>
+        <div class="text-xl font-extrabold tracking-tight text-slate-800 uppercase">
+            GURU<span class="text-blue-600">TELUGU</span>
+        </div>
+    </div>
+
+    <div class="hidden md:flex gap-6 font-bold text-xs uppercase tracking-widest text-slate-500">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="#status" class="hover:text-blue-600 transition">Results Status</a>
+        <a href="#resources" class="hover:text-blue-600 transition">Free Resources</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero-gradient text-white py-16 px-8 text-center relative">
+    <div class="relative z-10">
+        <h1 class="text-4xl md:text-6xl font-black mb-4">
+            TGSET <span class="text-blue-400">2026</span> Portal
+        </h1>
+        <p class="text-slate-300 text-lg max-w-2xl mx-auto">
+            Your comprehensive guide for Assistant Professor eligibility in Telangana State.
+        </p>
+
+        <div class="mt-6 inline-block px-4 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 font-mono text-sm">
+            Last Updated: March 16, 2026
+        </div>
+    </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-12">
+
+<!-- STATUS -->
+<section id="status" class="mb-16">
+    <div class="flex items-center gap-3 mb-8">
+        <div class="p-2 bg-blue-600 rounded-lg text-white">🔔</div>
+        <h2 class="text-2xl font-black">Latest Notifications & Results</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Results -->
+        <div class="glass-card p-8 border-l-8 border-orange-500">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold">TGSET 2025 Results</h3>
+                <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">
+                    Awaiting
+                </span>
+            </div>
+
+            <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                The TGSET 2025 exam was conducted on 
+                <strong>Dec 22, 23, and 24, 2025</strong>. 
+                Results expected by <strong>March–April 2026</strong>.
+            </p>
+
+            <a href="http://telanganaset.org/" target="_blank" class="btn-modern">
+                Official Portal
+            </a>
+        </div>
+
+        <!-- Notification -->
+        <div class="glass-card p-8 border-l-8 border-blue-600">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold">TGSET 2026 Notification</h3>
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">
+                    Upcoming
+                </span>
+            </div>
+
+            <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                Notification expected in 
+                <strong>September 2026</strong>.
+            </p>
+
+            <div class="text-[10px] font-bold text-slate-400">
+                Conducted by Osmania University
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY TGSET -->
+<section class="mb-16 bg-white p-10 rounded-[40px] shadow-sm">
+    <h2 class="text-2xl font-black mb-6">Why TGSET?</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <div>
+            <h4 class="font-bold text-blue-600 mb-2">Academic Eligibility</h4>
+            <p class="text-sm text-slate-500">
+                Required for Assistant Professor jobs.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-blue-600 mb-2">Lifetime Validity</h4>
+            <p class="text-sm text-slate-500">
+                Certificate valid forever.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="font-bold text-blue-600 mb-2">Qualification</h4>
+            <p class="text-sm text-slate-500">
+                Master's with 55% marks.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+    <div class="flex items-center gap-3 mb-8">
+        <div class="p-2 bg-emerald-600 rounded-lg text-white">📚</div>
+        <h2 class="text-2xl font-black">Free Resources</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="glass-card p-6 text-center">
+            <h4 class="font-bold mb-2">PYQs</h4>
+            <a href="http://telanganaset.org/prev-qp.html" target="_blank" class="btn-modern">Download</a>
+        </div>
+
+        <div class="glass-card p-6 text-center">
+            <h4 class="font-bold mb-2">Mock Tests</h4>
+            <a href="http://www.telanganaset.org/Tssetmocktestlinks.htm" target="_blank" class="btn-modern">Start</a>
+        </div>
+
+        <div class="glass-card p-6 text-center">
+            <h4 class="font-bold mb-2">Syllabus</h4>
+            <a href="http://telanganaset.org" target="_blank" class="btn-modern">View</a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-slate-950 py-10 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
+    CSGURU TELUGU | 2026
+</footer>
+
+</body>
+</html>

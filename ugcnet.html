@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGC NET | CSGuruTelugu</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* 🔥 BODY */
+body {
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:#f5f7fb;
+  color:#0f172a;
+}
+
+/* 🔥 HEADER */
+header {
+  background:#ffffff;
+  padding:15px 0;
+  border-bottom:2px solid #e2e8f0;
+}
+
+.header-container {
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand-section {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-img {
+  width:60px;
+  height:60px;
+  border-radius:50%;
+}
+
+.brand-text h1 {
+  margin:0;
+  font-size:1.8rem;
+}
+
+.tagline {
+  font-size:0.7rem;
+  color:#64748b;
+}
+
+/* 🔥 NAVBAR */
+.menu-3d {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:12px;
+  background:#0f172a;
+}
+
+.menu-3d a {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#cbd5e1;
+  background:#1e293b;
+  padding:10px;
+  border-radius:10px;
+  font-size:12px;
+  transition:0.3s;
+}
+
+.menu-3d a:hover {
+  background:#4f46e5;
+  color:#fff;
+}
+
+/* 🔥 SUBMENU */
+.has-submenu {
+  position:relative;
+}
+
+.submenu {
+  position:absolute;
+  top:110%;
+  left:0;
+  background:#1e293b;
+  border-radius:8px;
+  min-width:140px;
+  opacity:0;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.has-submenu:hover .submenu {
+  opacity:1;
+  pointer-events:auto;
+}
+
+.submenu a {
+  display:block;
+  padding:10px;
+  color:#cbd5e1;
+}
+
+/* 🔥 HERO */
+.hero {
+  background: linear-gradient(135deg,#0f172a,#4f46e5);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1 {
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.hero p {
+  color:#cbd5e1;
+}
+
+/* 🔥 CONTENT */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:#4f46e5;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ✅ HEADER -->
+<header>
+  <div class="header-container">
+
+    <div class="brand-section">
+      <img src="LOGO.jpg" class="logo-img">
+      <div class="brand-text">
+        <h1>CSGuruTelugu</h1>
+        <span class="tagline">Learn Today. Lead Tomorrow.</span>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ✅ NAVBAR -->
+<nav class="menu-3d">
+
+  <a href="index.html"><i class="fas fa-home"></i><p>Home</p></a>
+
+  <div class="has-submenu">
+    <a href="#"><i class="fas fa-graduation-cap"></i><p>Exams</p></a>
+    <div class="submenu">
+      <a href="ugcnet.html" target="_blank">UGC NET</a>
+      <a href="tgset.html" target="_blank">TG SET</a>
+      <a href="gate.html" target="_blank">GATE</a>
+    </div>
+  </div>
+
+  <a href="#"><i class="fas fa-video"></i><p>Tutorials</p></a>
+  <a href="#"><i class="fas fa-book"></i><p>Resources</p></a>
+
+  <a href="telangana.html" target="_blank">
+    <i class="fas fa-map-marker-alt"></i><p>Telangana</p>
+  </a>
+
+</nav>
+
+<!-- 🔥 HERO -->
+<section class="hero">
+  <h1>UGC NET 2026</h1>
+  <p>Complete preparation platform for JRF & Assistant Professor</p>
+</section>
+
+<!-- 🔥 CONTENT -->
+<div class="container">
+
+  <div class="card">
+    <h2>📢 Latest Updates</h2>
+    <p>Notification expected in April 2026. Exam in June 2026.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📘 Syllabus</h3>
+      <p>Download updated syllabus for all subjects.</p>
+      <a href="https://www.ugcnetonline.in" target="_blank" class="btn">View</a>
+    </div>
+
+    <div class="card">
+      <h3>📂 Previous Papers</h3>
+      <p>Practice with official PYQs.</p>
+      <a href="https://www.nta.ac.in" target="_blank" class="btn">Download</a>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Mock Tests</h3>
+      <p>Improve speed and accuracy.</p>
+      <a href="https://nta.ac.in" target="_blank" class="btn">Start</a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

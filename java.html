@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSGURU TELUGU | Java Tutorials 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root { --india-saffron:#FF9933; --india-green:#138808; --india-blue:#000080; }
+body { font-family: 'Inter', sans-serif; background:#f8fafc; margin:0; scroll-behavior:smooth; }
+.elite-card { background:#fff; border-radius:16px; border-top:4px solid var(--india-blue); transition:0.4s; cursor:pointer; overflow:hidden; }
+.elite-card:hover { transform:translateY(-8px) scale(1.02); box-shadow:0 15px 30px rgba(0,0,0,.15); }
+.icon { width:50px;height:50px;border-radius:12px; display:flex;align-items:center;justify-content:center; color:#fff; font-size:24px; }
+</style>
+</head>
+<body>
+
+<!-- INDIA GOV BAR -->
+<div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808]"></div>
+
+<!-- NAVIGATION -->
+<nav class="bg-white border-b-4 border-[#000080] shadow-md sticky top-0 z-50 flex justify-between items-center px-6 py-4">
+  <div class="flex items-center gap-4">
+    <div class="w-12 h-12 bg-blue-900 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg">CS</div>
+    <div class="leading-tight">
+      <div class="text-xl font-black text-blue-900">CSGURU <span class="text-orange-500 italic">TELUGU</span></div>
+      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Java Tutorials 2026</div>
+    </div>
+  </div>
+  <div class="hidden lg:flex gap-6 text-[11px] font-extrabold uppercase text-blue-900">
+    <a href="index.html">Home</a>
+    <a href="java.html" class="text-orange-500">Java</a>
+    <a href="cisco.html">Cisco</a>
+    <a href="ugcnet.html">UGC NET</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="text-center bg-[#1e293b] text-white py-20 border-b-8 border-orange-500">
+  <h1 class="text-4xl font-extrabold italic">Java Programming Playlists</h1>
+  <p class="text-slate-300 mt-2">Step‑by‑step Java tutorials in Telugu from CSGuruTelugu</p>
+  <div id="clock" class="mt-3 text-sm font-mono"></div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="max-w-7xl mx-auto p-6">
+<div class="section-ribbon mb-4 text-xl font-bold text-[#000080]">Java Playlists</div>
+
+<div id="grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+</main>
+
+<footer class="bg-slate-950 py-6 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
+  CSGURU TELUGU | Verified 2026 Academic Portal
+</footer>
+
+<script>
+// CLOCK
+setInterval(()=>{ document.getElementById("clock").innerText = new Date().toLocaleString("en-IN"); },1000);
+
+// PLAYLIST DATA
+const playlists = [
+  {n:"Encapsulation", icon:"🔒", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzyrFu9rAtZjZ53kea8GqEMSM"},
+  {n:"Strings in Java", icon:"🔤", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzyoPAfk_W--TuvCPV9hw1v-c"},
+  {n:"Java Methods", icon:"⚙️", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzyrEbQ1mwhOvVYWicllGSPAI"},
+  {n:"Java Arrays", icon:"🗂️", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzyrEbQ1mwhOvVYWicllGSPAI"},
+  {n:"Java Constructors", icon:"🏗️", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzypB_afhIRAag_w3ENdVnSEh"},
+  {n:"Data Abstraction", icon:"📦", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzyqcWAu_iK3YrzLq__2ghQoy"},
+  {n:"Inheritance", icon:"🧬", l:"https://www.youtube.com/playlist?list=PLzJKNKU9mzypIiO7_B_M5obO-G_wy3rFE"}
+];
+
+// RENDER PLAYLISTS
+function render(){
+  const grid=document.getElementById("grid");
+  grid.innerHTML = playlists.map(x=>`
+    <div class="elite-card p-5" onclick="window.open('${x.l}','_blank')">
+      <div class="flex justify-between mb-3">
+        <div class="icon bg-blue-600">${x.icon}</div>
+      </div>
+      <h3 class="font-bold text-lg">${x.n}</h3>
+    </div>
+  `).join("");
+}
+render();
+</script>
+
+</body>
+</html>

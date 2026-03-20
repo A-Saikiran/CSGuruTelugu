@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSGURU TELUGU | Cisco Learning & Certifications 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root { --india-saffron:#FF9933; --india-green:#138808; --india-blue:#000080; }
+body { font-family: 'Inter', sans-serif; background:#f8fafc; margin:0; scroll-behavior:smooth; }
+.elite-card { background:#fff; border-radius:16px; border-top:4px solid var(--india-blue); transition:0.4s; cursor:pointer; overflow:hidden; }
+.elite-card:hover { transform:translateY(-8px) scale(1.02); box-shadow:0 15px 30px rgba(0,0,0,.15); }
+.icon { width:50px;height:50px;border-radius:12px; display:flex;align-items:center;justify-content:center; color:#fff; font-size:24px; }
+</style>
+</head>
+<body>
+
+<!-- GOV BAR -->
+<div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808]"></div>
+
+<nav class="bg-white border-b-4 border-[#000080] shadow-md sticky top-0 z-50 flex justify-between items-center px-6 py-4">
+  <div class="flex items-center gap-4">
+    <div class="w-12 h-12 bg-blue-900 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg">CS</div>
+    <div class="leading-tight">
+      <div class="text-xl font-black text-blue-900">CSGURU <span class="text-orange-500 italic">TELUGU</span></div>
+      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Cisco Learning & Certs 2026</div>
+    </div>
+  </div>
+  <div class="hidden lg:flex gap-6 text-[11px] font-extrabold uppercase text-blue-900">
+    <a href="index.html">Home</a>
+    <a href="java.html">Java</a>
+    <a href="cisco.html" class="text-orange-500">Cisco</a>
+    <a href="ugcnet.html">UGC NET</a>
+  </div>
+</nav>
+
+<header class="text-center bg-[#1e293b] text-white py-20 border-b-8 border-orange-500">
+  <h1 class="text-4xl font-extrabold italic">Cisco Learning & Certification</h1>
+  <p class="text-slate-300 mt-2">Learn networking fundamentals & prepare for Cisco CCNA, CCNP & CCIE certifications</p>
+  <div id="clock" class="mt-3 text-sm font-mono"></div>
+</header>
+
+<main class="max-w-7xl mx-auto p-6">
+<div class="section-ribbon mb-4 text-xl font-bold text-[#000080]">Official Cisco Resources</div>
+
+<div id="grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+  <!-- Cisco Networking Academy -->
+  <div class="elite-card p-5" onclick="window.open('https://www.cisco.com/site/us/en/learn/training-certifications/training/netacad/index.html','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-red-600">🌐</div></div>
+    <h3 class="font-bold text-lg">Cisco Networking Academy</h3>
+    <p class="text-sm text-slate-600 mt-1">Official NetAcad platform with free networking & IT courses.</p>
+  </div>
+
+  <!-- CCNA Certification -->
+  <div class="elite-card p-5" onclick="window.open('https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-blue-600">📘</div></div>
+    <h3 class="font-bold text-lg">CCNA Certification</h3>
+    <p class="text-sm text-slate-600 mt-1">Cisco Certified Network Associate – foundational networking cert. :contentReference[oaicite:7]{index=7}</p>
+  </div>
+
+  <!-- CCNP Certification -->
+  <div class="elite-card p-5" onclick="window.open('https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccnp-enterprise/index.html','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-yellow-600">📗</div></div>
+    <h3 class="font-bold text-lg">CCNP Certification</h3>
+    <p class="text-sm text-slate-600 mt-1">Cisco Certified Network Professional – advanced networking skills. :contentReference[oaicite:8]{index=8}</p>
+  </div>
+
+  <!-- CCIE Certification -->
+  <div class="elite-card p-5" onclick="window.open('https://www.cisco.com/site/us/en/learn/training-certifications/certifications/expert/index.html','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-purple-700">🏆</div></div>
+    <h3 class="font-bold text-lg">CCIE Certification</h3>
+    <p class="text-sm text-slate-600 mt-1">Cisco Certified Internetwork Expert – expert‑level networking cert. :contentReference[oaicite:9]{index=9}</p>
+  </div>
+
+  <!-- All Cisco Certifications -->
+  <div class="elite-card p-5" onclick="window.open('https://www.cisco.com/site/us/en/learn/training-certifications/certifications/index.html','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-green-600">📋</div></div>
+    <h3 class="font-bold text-lg">Cisco All Certifications</h3>
+    <p class="text-sm text-slate-600 mt-1">Official Cisco list of all certification paths & exams. :contentReference[oaicite:10]{index=10}</p>
+  </div>
+
+  <!-- Cisco Exam Details -->
+  <div class="elite-card p-5" onclick="window.open('https://www.cisco.com/site/us/en/learn/training-certifications/exams/index.html','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-indigo-600">🎯</div></div>
+    <h3 class="font-bold text-lg">Cisco Exam Info</h3>
+    <p class="text-sm text-slate-600 mt-1">Browse individual exam codes, schedules & details from Cisco. :contentReference[oaicite:11]{index=11}</p>
+  </div>
+
+  <!-- CCNA Exam Topics -->
+  <div class="elite-card p-5" onclick="window.open('https://learningnetwork.cisco.com/s/ccna-exam-topics','_blank')">
+    <div class="flex justify-between mb-3"><div class="icon bg-blue-800">📊</div></div>
+    <h3 class="font-bold text-lg">CCNA Topics + Study Guide</h3>
+    <p class="text-sm text-slate-600 mt-1">Official CCNA detailed exam topics & study guide. :contentReference[oaicite:12]{index=12}</p>
+  </div>
+
+</div>
+</main>
+
+<footer class="bg-slate-950 py-6 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
+  CSGURU TELUGU | Verified 2026 Learning Resource Hub
+</footer>
+
+<script>
+// CLOCK
+setInterval(()=>{ document.getElementById("clock").innerText = new Date().toLocaleString("en-IN"); },1000);
+</script>
+
+</body>
+</html>
