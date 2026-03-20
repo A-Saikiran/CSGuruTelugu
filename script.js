@@ -1,4 +1,4 @@
-// Telangana Festivals
+// ======================= TELANGANA FESTIVALS =======================
 const telanganaFestivals = {
   // January 2026
   "01-Jan":"New Year's Day; Global Family Day",
@@ -20,6 +20,7 @@ const telanganaFestivals = {
   "04-Feb":"World Cancer Day",
   "10-Feb":"National De-worming Day; World Pulses Day",
   "13-Feb":"World Radio Day; National Women's Day (India)",
+  "14-Feb":"Valentine’s Day",
   "15-Feb":"Maha Shivaratri",
   "20-Feb":"World Day of Social Justice",
   "21-Feb":"International Mother Language Day",
@@ -52,6 +53,7 @@ const telanganaFestivals = {
   "01-May":"International Labour Day; Buddha Purnima",
   "03-May":"World Press Freedom Day",
   "08-May":"World Red Cross Day",
+  "09-May":"Mother’s Day (2nd Sunday of May)",
   "11-May":"National Technology Day (India)",
   "12-May":"International Nurses Day",
   "21-May":"Anti-Terrorism Day (India)",
@@ -65,7 +67,7 @@ const telanganaFestivals = {
   "08-Jun":"World Oceans Day",
   "12-Jun":"World Day Against Child Labour",
   "14-Jun":"World Blood Donor Day",
-  "21-Jun":"International Day of Yoga",
+  "21-Jun":"Father’s Day (3rd Sunday of June); International Day of Yoga",
   "26-Jun":"Muharram (Tentative)",
   "29-Jun":"National Statistics Day (India)",
 
@@ -116,43 +118,47 @@ const telanganaFestivals = {
   "10-Dec":"Human Rights Day",
   "22-Dec":"National Mathematics Day (India)",
   "23-Dec":"Kisan Diwas (Farmers' Day)",
-  "25-Dec":"Christmas Day",
-
-  // Observances & Fun Days
-  "14-Feb":"Valentine’s Day",
-  "09-May":"Mother’s Day (2nd Sunday of May)",
-  "21-Jun":"Father’s Day (3rd Sunday of June)"
+  "25-Dec":"Christmas Day"
 };
 
-// CLOCK + FESTIVAL
-function updateClock(){
-  const now = new Date();
-  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  const dayName = days[now.getDay()];
-  const date = String(now.getDate()).padStart(2,'0');
-  const month = months[now.getMonth()];
-  const year = now.getFullYear();
-  const time = now.toLocaleTimeString('en-IN',{hour12:true});
+// ======================= CLOCK + FESTIVAL =======================
+function updateClock() {
+    const clockBox = document.getElementById('clock-box');
+    const now = new Date();
 
-  const clockEl = document.getElementById("clock-box");
-  const festEl = document.getElementById("festival-msg");
+    // Format date: YYYY-MM-DD
+    const date = now.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 
-  if(clockEl){
-    clockEl.innerHTML = `<span class="date-part">${dayName}, ${date}-${month}-${year}</span><br>
-                         <span class="time-part">${time}</span>`;
-  }
+    // Format time: HH:MM:SS
+    const time = now.toLocaleTimeString('en-GB');
 
-  const key = `${date}-${month}`;
-  if(festEl){
-    const fest = telanganaFestivals[key];
-    festEl.innerText = fest ? `🎉 Happy ${fest}! 🎉` : '';
-  }
+    // Set HTML with spans for styling
+    clockBox.innerHTML = `<span class="date">${date}</span><span class="time">${time}</span>`;
 }
-setInterval(updateClock,1000);
+
+// Update every second
+setInterval(updateClock, 1000);
+updateClock(); // initial call
+
+    // Festival display
+const festEl = document.getElementById("festival-msg");
+if(festEl){
+    const key = `${date}-${month}`; // today
+    let fest = telanganaFestivals[key];
+
+    // TEST: if today not in object, just pick first festival in object
+    if(!fest){
+        const firstKey = Object.keys(telanganaFestivals)[0];
+        fest = telanganaFestivals[firstKey];
+    }
+
+    festEl.innerText = fest ? `🎉 Happy ${fest}! 🎉` : '';
+}
+
+setInterval(updateClock, 1000);
 updateClock();
 
-// HERO IMAGE SLIDER
+// ======================= HERO IMAGE SLIDER =======================
 const heroBg = document.getElementById("hero-bg");
 if(heroBg){
   const images = [
@@ -164,25 +170,29 @@ if(heroBg){
     "https://images.unsplash.com/photo-1581090700227-1e37b190418e",
     "https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
   ];
-  const allImages = [...images,...images];
+
+  const allImages = [...images, ...images];
   heroBg.innerHTML = "";
+
   allImages.forEach(src=>{
-    const div=document.createElement("div");
-    div.style.backgroundImage=`url(${src})`;
-    div.style.minWidth="100vw";
-    div.style.height="100%";
-    div.style.backgroundSize="cover";
-    div.style.backgroundPosition="center";
+    const div = document.createElement("div");
+    div.style.backgroundImage = `url(${src})`;
+    div.style.minWidth = "100vw";
+    div.style.height = "100%";
+    div.style.backgroundSize = "cover";
+    div.style.backgroundPosition = "center";
     heroBg.appendChild(div);
   });
 }
 
-// SUBMENU CLICK
+// ======================= SUBMENU =======================
 document.querySelectorAll('.has-submenu > a').forEach(item=>{
   item.addEventListener('click', e=>{
     e.preventDefault();
     const submenu = item.nextElementSibling;
-    document.querySelectorAll('.submenu').forEach(s=>{if(s!==submenu)s.classList.remove('show');});
+    document.querySelectorAll('.submenu').forEach(s=>{
+      if(s !== submenu) s.classList.remove('show');
+    });
     submenu.classList.toggle('show');
   });
 });
