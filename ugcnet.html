@@ -1,245 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UGC NET | CSGuruTelugu</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-/* 🔥 BODY */
-body {
-  margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:#f5f7fb;
-  color:#0f172a;
-}
-
-/* 🔥 HEADER */
-header {
-  background:#ffffff;
-  padding:15px 0;
-  border-bottom:2px solid #e2e8f0;
-}
-
-.header-container {
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.brand-section {
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.logo-img {
-  width:60px;
-  height:60px;
-  border-radius:50%;
-}
-
-.brand-text h1 {
-  margin:0;
-  font-size:1.8rem;
-}
-
-.tagline {
-  font-size:0.7rem;
-  color:#64748b;
-}
-
-/* 🔥 NAVBAR */
-.menu-3d {
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  padding:12px;
-  background:#0f172a;
-}
-
-.menu-3d a {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  color:#cbd5e1;
-  background:#1e293b;
-  padding:10px;
-  border-radius:10px;
-  font-size:12px;
-  transition:0.3s;
-}
-
-.menu-3d a:hover {
-  background:#4f46e5;
-  color:#fff;
-}
-
-/* 🔥 SUBMENU */
-.has-submenu {
-  position:relative;
-}
-
-.submenu {
-  position:absolute;
-  top:110%;
-  left:0;
-  background:#1e293b;
-  border-radius:8px;
-  min-width:140px;
-  opacity:0;
-  pointer-events:none;
-  transition:0.3s;
-}
-
-.has-submenu:hover .submenu {
-  opacity:1;
-  pointer-events:auto;
-}
-
-.submenu a {
-  display:block;
-  padding:10px;
-  color:#cbd5e1;
-}
-
-/* 🔥 HERO */
-.hero {
-  background: linear-gradient(135deg,#0f172a,#4f46e5);
-  color:white;
-  text-align:center;
-  padding:80px 20px;
-}
-
-.hero h1 {
-  font-size:3rem;
-  margin-bottom:10px;
-}
-
-.hero p {
-  color:#cbd5e1;
-}
-
-/* 🔥 CONTENT */
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-.card {
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:20px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.btn {
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 15px;
-  background:#4f46e5;
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
-  font-size:12px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC NET CS & Paper 1 Syllabus Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .grid-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+        }
+        .grid-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
+        }
+        .modal-overlay {
+            backdrop-filter: blur(8px);
+            display: none;
+            background: rgba(15, 23, 42, 0.7);
+        }
+        .modal-active { display: flex; }
+        .syllabus-text b { color: #1e293b; display: block; margin-top: 1.2rem; font-size: 1.1rem; border-left: 4px solid currentColor; padding-left: 12px; }
+        
+        /* Vibrant Color Classes */
+        .icon-teal { background: linear-gradient(135deg, #0eead1, #009a9a); }
+        .icon-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .icon-purple { background: linear-gradient(135deg, #a855f7, #6b21a8); }
+        .icon-pink { background: linear-gradient(135deg, #ec4899, #9d174d); }
+        .icon-orange { background: linear-gradient(135deg, #f97316, #c2410c); }
+        .icon-red { background: linear-gradient(135deg, #ef4444, #991b1b); }
+        .icon-indigo { background: linear-gradient(135deg, #6366f1, #3730a3); }
+        .icon-green { background: linear-gradient(135deg, #22c55e, #15803d); }
+        .icon-cyan { background: linear-gradient(135deg, #06b6d4, #0e7490); }
+        .icon-amber { background: linear-gradient(135deg, #f59e0b, #b45309); }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-900 font-sans">
 
-<body>
+    <nav class="bg-white border-b sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <h1 class="font-bold text-xl tracking-tight">
+                    UGC NET <span class="text-indigo-600">SYLLABUS HUB</span>
+                </h1>
+            </div>
+            <div class="hidden md:block text-xs font-bold text-slate-400 uppercase tracking-widest">
+                Subject Code: 87
+            </div>
+        </div>
+    </nav>
 
-<!-- ✅ HEADER -->
-<header>
-  <div class="header-container">
+    <main class="max-w-7xl mx-auto p-6 md:p-10">
 
-    <div class="brand-section">
-      <img src="LOGO.jpg" class="logo-img">
-      <div class="brand-text">
-        <h1>CSGuruTelugu</h1>
-        <span class="tagline">Learn Today. Lead Tomorrow.</span>
-      </div>
+      <!-- ✅ LIVE UPDATES SECTION -->
+<section class="mb-12">
+    <div class="flex items-center gap-4 mb-8">
+        <h2 class="text-2xl font-black text-slate-800">
+            <i class="fa-solid fa-bolt text-yellow-500 animate-pulse"></i> UGC NET Live Updates
+        </h2>
+        <div class="h-[2px] flex-grow bg-slate-200"></div>
     </div>
 
-  </div>
-</header>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-<!-- ✅ NAVBAR -->
-<nav class="menu-3d">
+        <!-- 🔴 OFFICIAL UPDATES -->
+        <button onclick="window.open('https://ugcnet.nta.nic.in/', '_blank')" 
+            class="grid-button p-6 rounded-2xl text-left">
+            <div class="flex items-center gap-4">
+                <div class="icon-red text-white p-4 rounded-xl text-2xl animate-pulse">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Official Updates</h3>
+                    <p class="text-sm text-slate-500">Open NTA website</p>
+                </div>
+            </div>
+        </button>
 
-  <a href="index.html"><i class="fas fa-home"></i><p>Home</p></a>
+        <!-- 🧠 MOCK TEST (NEW) -->
+        <button onclick="window.open('https://nta.ac.in/Quiz', '_blank')" 
+            class="grid-button p-6 rounded-2xl text-left relative overflow-hidden">
 
-  <div class="has-submenu">
-    <a href="#"><i class="fas fa-graduation-cap"></i><p>Exams</p></a>
-    <div class="submenu">
-      <a href="ugcnet.html" target="_blank">UGC NET</a>
-      <a href="tgset.html" target="_blank">TG SET</a>
-      <a href="gate.html" target="_blank">GATE</a>
+            <!-- 🔥 Flash badge -->
+            <span class="absolute top-2 right-2 text-xs bg-yellow-400 text-black px-2 py-1 rounded-full animate-ping"></span>
+
+            <div class="flex items-center gap-4">
+                <div class="icon-indigo text-white p-4 rounded-xl text-2xl animate-bounce">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Mock Test</h3>
+                    <p class="text-sm text-slate-500">Practice quizzes (NTA)</p>
+                </div>
+            </div>
+        </button>
+
     </div>
-  </div>
-
-  <a href="#"><i class="fas fa-video"></i><p>Tutorials</p></a>
-  <a href="#"><i class="fas fa-book"></i><p>Resources</p></a>
-
-  <a href="telangana.html" target="_blank">
-    <i class="fas fa-map-marker-alt"></i><p>Telangana</p>
-  </a>
-
-</nav>
-
-<!-- 🔥 HERO -->
-<section class="hero">
-  <h1>UGC NET 2026</h1>
-  <p>Complete preparation platform for JRF & Assistant Professor</p>
 </section>
+        
+        <!-- SECTION: PAPER 1 -->
+        <section class="mb-12">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-2xl font-black text-slate-800">General Paper 1</h2>
+                <div class="h-[2px] flex-grow bg-slate-200"></div>
+            </div>
+            <div id="paper1-grid" class="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
+        </section>
 
-<!-- 🔥 CONTENT -->
-<div class="container">
+        <!-- SECTION: COMPUTER SCIENCE -->
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-2xl font-black text-slate-800">Computer Science (87)</h2>
+                <div class="h-[2px] flex-grow bg-slate-200"></div>
+            </div>
+            <div id="cs-grid" class="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
+        </section>
+    </main>
 
-  <div class="card">
-    <h2>📢 Latest Updates</h2>
-    <p>Notification expected in April 2026. Exam in June 2026.</p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>📘 Syllabus</h3>
-      <p>Download updated syllabus for all subjects.</p>
-      <a href="https://www.ugcnetonline.in" target="_blank" class="btn">View</a>
+    <!-- Modal -->
+    <div id="modal" class="modal-overlay fixed inset-0 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-3xl w-full max-h-[85vh] flex flex-col overflow-hidden">
+            <div id="modal-header" class="p-6 text-white flex justify-between items-center">
+                <div>
+                    <span id="unit-label" class="text-xs font-bold uppercase tracking-widest opacity-80 block mb-1"></span>
+                    <h2 id="modal-title" class="text-2xl font-bold"></h2>
+                </div>
+                <button onclick="closeModal()" class="text-3xl hover:scale-110 transition">&times;</button>
+            </div>
+            <div class="p-8 overflow-y-auto bg-white">
+                <div id="modal-content" class="syllabus-text text-slate-600 whitespace-pre-line leading-relaxed"></div>
+                <div class="mt-8 pt-6 border-t">
+                    <a id="nptel-link" href="#" target="_blank" class="inline-flex items-center gap-2 bg-slate-100 px-5 py-3 rounded-xl font-bold text-slate-700 hover:bg-indigo-600 hover:text-white transition">
+                        <i class="fa-solid fa-play-circle text-xl"></i> View NPTEL Lectures
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>📂 Previous Papers</h3>
-      <p>Practice with official PYQs.</p>
-      <a href="https://www.nta.ac.in" target="_blank" class="btn">Download</a>
-    </div>
+    <script>
+const p1Data = [
 
-    <div class="card">
-      <h3>🧠 Mock Tests</h3>
-      <p>Improve speed and accuracy.</p>
-      <a href="https://nta.ac.in" target="_blank" class="btn">Start</a>
-    </div>
+{
+u:1,t:"Teaching Aptitude",i:"fa-solid fa-person-chalkboard",c:"icon-teal",n:"https://nptel.ac.in",
+s:`<b>Teaching:</b> Concept, objectives, levels of teaching (Memory, Understanding, Reflective), characteristics and basic requirements
+<b>Learner’s Characteristics:</b> Characteristics of adolescent and adult learners (Academic, Social, Emotional and Cognitive), individual differences
+<b>Factors Affecting Teaching:</b> Teacher-related factors, learner-related factors, environment and institutional factors
+<b>Methods of Teaching:</b> Teacher-centred vs learner-centred methods, offline vs online methods (SWAYAM, MOOCs)
+<b>Teaching Support System:</b> Traditional, modern and ICT-based support systems
+<b>Evaluation Systems:</b> Elements and types of evaluation (formative and summative), CBCS, grading, computer-based testing`
+},
 
-  </div>
+{
+u:2,t:"Research Aptitude",i:"fa-solid fa-magnifying-glass-chart",c:"icon-blue",n:"https://nptel.ac.in",
+s:`<b>Research:</b> Meaning, types and characteristics
+<b>Approaches:</b> Positivism and post-positivistic approach
+<b>Methods of Research:</b> Experimental, descriptive, historical, qualitative and quantitative methods
+<b>Steps of Research:</b> Identification of problem, formulation of hypothesis, data collection, analysis and interpretation
+<b>Thesis and Article Writing:</b> Format and structure, referencing styles (APA, MLA etc.)
+<b>Research Ethics:</b> Ethical issues, plagiarism, integrity
+<b>ICT in Research:</b> Use of ICT tools and techniques in research`
+},
 
-</div>
+{
+u:3,t:"Comprehension",i:"fa-solid fa-book-open-reader",c:"icon-purple",n:"https://nptel.ac.in",
+s:`<b>Reading Comprehension:</b> A passage of text followed by questions to test understanding, inference and analysis`
+},
 
+{
+u:4,t:"Communication",i:"fa-solid fa-bullhorn",c:"icon-pink",n:"https://nptel.ac.in",
+s:`<b>Communication:</b> Meaning, types and characteristics of communication
+<b>Effective Communication:</b> Verbal and non-verbal communication, inter-cultural and group communication, classroom communication
+<b>Barriers to Communication:</b> Physical, semantic, psychological barriers
+<b>Mass-Media and Society:</b> Role and impact of mass media`
+},
+
+{
+u:5,t:"Mathematical Reasoning & Aptitude",i:"fa-solid fa-calculator",c:"icon-orange",n:"https://nptel.ac.in",
+s:`<b>Types of Reasoning:</b> Analogies, number series, letter series, coding-decoding, relationships
+<b>Mathematical Aptitude:</b> Fraction, time and distance, ratio, proportion, percentage, profit and loss, interest and discounting, averages, simple problems`
+},
+
+{
+u:6,t:"Logical Reasoning",i:"fa-solid fa-brain",c:"icon-red",n:"https://nptel.ac.in",
+s:`<b>Understanding Structure of Arguments:</b> Argument forms, structure and evaluation
+<b>Types of Reasoning:</b> Deductive and inductive reasoning
+<b>Logical Fallacies:</b> Identification and elimination
+<b>Venn Diagram:</b> Simple and multiple use for establishing validity of arguments
+<b>Indian Logic:</b> Means of knowledge (Pramanas) – Pratyaksha (Perception), Anumana (Inference), Upamana (Comparison), Shabda (Verbal testimony)`
+},
+
+{
+u:7,t:"Data Interpretation",i:"fa-solid fa-chart-pie",c:"icon-indigo",n:"https://nptel.ac.in",
+s:`<b>Sources of Data:</b> Primary and secondary data
+<b>Acquisition and Classification:</b> Collection and classification techniques
+<b>Representation of Data:</b> Tables, bar charts, histograms, pie charts, line graphs
+<b>Data Interpretation:</b> Quantitative and qualitative analysis
+<b>Data Governance:</b> Concepts and importance`
+},
+
+{
+u:8,t:"Information & Communication Technology (ICT)",i:"fa-solid fa-laptop-code",c:"icon-green",n:"https://nptel.ac.in",
+s:`<b>ICT:</b> General abbreviations and terminology
+<b>Basics of Internet:</b> Intranet, email, audio and video conferencing
+<b>Digital Initiatives:</b> SWAYAM, MOOCs, e-Governance, digital education initiatives
+<b>ICT in Education:</b> Role and impact`
+},
+
+{
+u:9,t:"People, Development & Environment",i:"fa-solid fa-leaf",c:"icon-cyan",n:"https://nptel.ac.in",
+s:`<b>Development and Environment:</b> Concept of development and environment
+<b>Human-Environment Interaction:</b> Anthropogenic activities and their impacts
+<b>Environmental Issues:</b> Pollution (air, water, soil, noise)
+<b>Waste Management:</b> Solid, liquid, biomedical, hazardous and e-waste
+<b>Climate Change:</b> Global warming and its effects
+<b>Sustainable Development:</b> Millennium Development Goals (MDGs) and Sustainable Development Goals (SDGs)`
+},
+
+{
+u:10,t:"Higher Education System",i:"fa-solid fa-building-columns",c:"icon-amber",n:"https://nptel.ac.in",
+s:`<b>Ancient Education System:</b> Institutions of higher learning in ancient India
+<b>Evolution of Education:</b> Development of higher education in India (post-independence)
+<b>Policies:</b> National Education Policy (NEP), governance, polity and administration
+<b>Regulatory Bodies:</b> UGC, AICTE and other bodies
+<b>Programs:</b> Professional, technical and skill-based education
+<b>Value Education:</b> Governance, ethics and inclusiveness`
+}
+
+];
+const p2Data = [
+
+{
+u:1,
+t:"Discrete Structures & Optimization",
+i:"fa-solid fa-diagram-project",
+c:"icon-blue",
+n:"https://nptel.ac.in",
+s:`<b>Mathematical Logic:</b> Propositional & predicate logic, equivalences, normal forms, predicates, quantifiers, nested quantifiers, rules of inference
+<b>Sets & Relations:</b> Set operations, representation & properties of relations, equivalence relations, partial ordering
+<b>Counting & Probability:</b> Counting techniques, pigeonhole principle, permutations & combinations, inclusion-exclusion, mathematical induction, probability, Bayes’ theorem
+<b>Algebraic Structures:</b> Groups, subgroups, semigroups, homomorphism, isomorphism, automorphism, rings, integral domains, fields
+<b>Graph Theory:</b> Simple/multi/weighted graphs, paths, circuits, shortest paths, Eulerian & Hamiltonian graphs, planar graphs, coloring, bipartite graphs, trees, spanning trees
+<b>Boolean Algebra:</b> Boolean functions, representation, simplification
+<b>Optimization:</b> Linear programming (graphical, simplex, dual simplex), sensitivity analysis, integer programming, transportation & assignment, PERT-CPM`
+},
+
+{
+u:2,
+t:"Computer System Architecture",
+i:"fa-solid fa-microchip",
+c:"icon-indigo",
+n:"https://nptel.ac.in",
+s:`<b>Digital Logic:</b> Logic gates, Boolean algebra, K-map, combinational & sequential circuits, flip-flops, registers, counters
+<b>Data Representation:</b> Number systems, complements, fixed & floating point, error detection, arithmetic algorithms
+<b>Register Transfer:</b> RTL, bus, memory transfer, arithmetic/logic/shift microoperations
+<b>Computer Organization:</b> Instruction cycle, registers, instructions, timing & control, I/O, interrupts
+<b>Programming Basics:</b> Machine language, assembly language, assembler, loops, subroutines
+<b>CPU & Control:</b> RISC, CISC, addressing modes, microprogrammed control
+<b>Pipelining & Parallelism:</b> Pipeline concepts, vector processing, parallel processing
+<b>Memory & I/O:</b> Cache, virtual memory, DMA, I/O modes
+<b>Multiprocessors:</b> Interconnection, communication, cache coherence, multicore systems`
+},
+
+{
+u:3,
+t:"Programming Languages & Computer Graphics",
+i:"fa-solid fa-code",
+c:"icon-green",
+n:"https://nptel.ac.in",
+s:`<b>Language Concepts:</b> Paradigms, models, syntax, translation phases, programming environments
+<b>Data Types:</b> Scalar & composite types
+<b>C Programming:</b> Tokens, data types, control, arrays, pointers, functions, file handling, preprocessors
+<b>OOP Concepts:</b> Classes, objects, inheritance, polymorphism, encapsulation
+<b>C++:</b> Functions, overloading, constructors, templates, exception handling, files
+<b>Web Programming:</b> HTML, DHTML, XML, Java, servlets, applets
+<b>Computer Graphics:</b> Display devices, line/circle algorithms, polygon filling
+<b>2D/3D Transformations:</b> Translation, scaling, rotation, viewing pipeline, clipping, projections
+<b>Curves & Surfaces:</b> Bezier, B-spline, rendering, illumination models`
+},
+
+{
+u:4,
+t:"Database Management Systems",
+i:"fa-solid fa-database",
+c:"icon-cyan",
+n:"https://nptel.ac.in",
+s:`<b>DBMS Concepts:</b> Data models, schemas, architecture, data independence, client-server
+<b>ER & Relational Model:</b> Constraints, algebra, calculus, Codd rules
+<b>SQL:</b> DDL, DML, queries, joins, views, triggers, stored procedures
+<b>Normalization:</b> Functional dependencies, normal forms
+<b>Transactions:</b> Concurrency control, recovery, security, authorization
+<b>Advanced DB:</b> Object DB, distributed DB, multimedia DB, XML databases
+<b>Data Warehousing & Mining:</b> OLAP, OLTP, clustering, classification, regression, SVM, KNN, HMM
+<b>Big Data:</b> Hadoop, MapReduce, HDFS
+<b>NoSQL:</b> Concepts, indexing, cloud databases`
+},
+
+{
+u:5,
+t:"System Software & Operating Systems",
+i:"fa-solid fa-desktop",
+c:"icon-pink",
+n:"https://nptel.ac.in",
+s:`<b>System Software:</b> Compilers, interpreters, loaders, linkers, macros, debuggers
+<b>OS Basics:</b> Structure, services, system calls, booting
+<b>Processes & Threads:</b> Scheduling, IPC, synchronization, semaphores, multithreading
+<b>CPU Scheduling:</b> Algorithms, real-time scheduling
+<b>Deadlocks:</b> Prevention, avoidance, detection & recovery
+<b>Memory Management:</b> Paging, segmentation, virtual memory
+<b>Storage:</b> Disk scheduling, RAID
+<b>File Systems:</b> Allocation, directories, performance
+<b>Security:</b> Access control, authentication, cryptography basics
+<b>Virtualization:</b> Virtual machines
+<b>OS Case Studies:</b> Linux & Windows
+<b>Distributed Systems:</b> Network OS, communication, DFS`
+},
+
+{
+u:6,
+t:"Software Engineering",
+i:"fa-solid fa-screwdriver-wrench",
+c:"icon-amber",
+n:"https://nptel.ac.in",
+s:`<b>Process Models:</b> Waterfall, Agile, XP, Scrum, RAD, Spiral
+<b>Requirements:</b> Functional & non-functional, SRS, use cases
+<b>Design:</b> Architecture, cohesion, coupling, UI design, OOD
+<b>Software Quality:</b> ISO standards, risk management, reliability
+<b>Project Estimation:</b> LOC, FP, COCOMO, scheduling
+<b>Testing:</b> Unit, integration, white-box, black-box, regression, performance
+<b>Configuration Management:</b> Version control, re-engineering, reverse engineering`
+},
+
+{
+u:7,
+t:"Data Structures & Algorithms",
+i:"fa-solid fa-gears",
+c:"icon-orange",
+n:"https://nptel.ac.in",
+s:`<b>Data Structures:</b> Arrays, stacks, queues, linked lists, trees, BST, AVL, B/B+/B* trees, graphs, hashing
+<b>Algorithm Analysis:</b> Time & space complexity, asymptotic notation, recurrences
+<b>Design Techniques:</b> Divide & conquer, greedy, dynamic programming, backtracking, branch & bound
+<b>Graph Algorithms:</b> BFS, DFS, shortest path, MST, max flow
+<b>Complexity Theory:</b> P, NP, NP-complete
+<b>Advanced Topics:</b> FFT, string matching, randomized & approximation algorithms`
+},
+
+{
+u:8,
+t:"Theory of Computation & Compilers",
+i:"fa-solid fa-terminal",
+c:"icon-red",
+n:"https://nptel.ac.in",
+s:`<b>Formal Languages:</b> Grammars, models, non-computable problems
+<b>Automata:</b> DFA, NFA, regular languages, pumping lemma
+<b>CFG & PDA:</b> Normal forms, ambiguity, parse trees
+<b>Turing Machines:</b> Variants, Church-Turing thesis, decidability
+<b>Unsolvable Problems:</b> Halting problem, PCP
+<b>Parsing:</b> LL(1), LR, LALR, recursive descent
+<b>Semantic Analysis:</b> Syntax-directed translation, type checking
+<b>Compiler Design:</b> Intermediate code, optimization, code generation`
+},
+
+{
+u:9,
+t:"Data Communication & Computer Networks",
+i:"fa-solid fa-network-wired",
+c:"icon-teal",
+n:"https://nptel.ac.in",
+s:`<b>Data Communication:</b> Signals, transmission modes, encoding, modulation, errors
+<b>Networking:</b> LAN, WAN, wireless networks, topologies
+<b>Models:</b> OSI & TCP/IP, protocols
+<b>Network Functions:</b> Flow control, error control, multiple access protocols
+<b>IP & Routing:</b> IPv4, IPv6, ARP, routing algorithms
+<b>Transport Layer:</b> TCP, UDP, congestion control
+<b>Applications:</b> DNS, HTTP, FTP, email
+<b>Security:</b> Cryptography, VPN, firewalls
+<b>Mobile & Wireless:</b> GSM, CDMA, MANET, wireless LAN
+<b>Cloud & IoT:</b> SaaS, PaaS, IaaS, virtualization, IoT basics`
+},
+
+{
+u:10,
+t:"Artificial Intelligence (AI)",
+i:"fa-solid fa-robot",
+c:"icon-purple",
+n:"https://nptel.ac.in",
+s:`<b>AI Approaches:</b> Turing test, rational agents, problem solving
+<b>Search Techniques:</b> Heuristic search, A*, game playing, minimax, alpha-beta pruning
+<b>Knowledge Representation:</b> Logic, semantic networks, frames, ontologies, expert systems
+<b>Planning:</b> STRIPS, goal stack, hierarchical planning
+<b>NLP:</b> Parsing, semantics, pragmatics
+<b>Multi-Agent Systems:</b> Agent communication, coordination, semantic web
+<b>Soft Computing:</b> Fuzzy logic, neural networks (basics)`
+}
+
+];
+
+// ================= RENDER FUNCTION =================
+function renderGrid(data, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+
+    data.forEach(item => {
+        const btn = document.createElement("div");
+        btn.className = "grid-button p-5 rounded-2xl cursor-pointer";
+
+        btn.innerHTML = `
+            <div class="flex flex-col items-center text-center gap-3">
+                <div class="${item.c} text-white p-4 rounded-xl text-2xl">
+                    <i class="${item.i}"></i>
+                </div>
+                <h3 class="font-bold text-sm md:text-base">${item.t}</h3>
+            </div>
+        `;
+
+        btn.onclick = () => openModal(item);
+        container.appendChild(btn);
+    });
+}
+
+// ================= MAIN MODAL =================
+function openModal(item) {
+    document.getElementById("modal").classList.add("modal-active");
+    document.body.style.overflow = "hidden";
+
+    document.getElementById("modal-title").innerText = item.t;
+    document.getElementById("unit-label").innerText = "Unit " + item.u;
+    document.getElementById("modal-content").innerHTML = item.s;
+    document.getElementById("nptel-link").href = item.n;
+
+    document.getElementById("modal-header").className =
+        "p-6 text-white flex justify-between items-center " + item.c;
+}
+
+function closeModal() {
+    document.getElementById("modal").classList.remove("modal-active");
+    document.body.style.overflow = "auto";
+}
+
+// ================= LIVE UPDATES MODAL =================
+function openUpdatesModal() {
+    document.getElementById("updatesModal").classList.add("modal-active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeUpdatesModal() {
+    document.getElementById("updatesModal").classList.remove("modal-active");
+    document.body.style.overflow = "auto";
+}
+
+// ================= INIT =================
+renderGrid(p1Data, "paper1-grid");
+renderGrid(p2Data, "cs-grid");
+
+// Close modal on outside click
+document.getElementById("modal").addEventListener("click", function(e){
+    if(e.target === this) closeModal();
+});
+
+document.getElementById("updatesModal").addEventListener("click", function(e){
+    if(e.target === this) closeUpdatesModal();
+});
+    </script>
 </body>
 </html>
