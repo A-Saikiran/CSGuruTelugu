@@ -1,4 +1,9 @@
 /* ================= ROOT ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;   /* ✅ removes horizontal scroll */
+}
 :root {
     --primary:#002b5c;
     --secondary:#ff9900;
@@ -178,20 +183,22 @@ header {
 }
 
 /* slider */
-.hero-bg {
-    position: absolute;
-    height: 100%;
-    display: flex;
-    width: 200%;
-    animation: slideBG 60s linear infinite;
-    z-index: 1;
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  width: 100%;
 }
 
-.hero-bg div {
-    min-width: 100vw;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        /* ✅ FIXED (NOT 200%) */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
 
 @keyframes slideBG {
@@ -254,7 +261,7 @@ header {
 
   <div class="hero-content">
     <h1 class="hero-title">Telugu Tech Learning Platform</h1>
-    <p class="hero-subtitle">తెలుగులో టెక్నాలజీ నేర్చుకోండి 💻</p>
+    <p class="hero-subtitle">తెలుగులో టెక్నాలజీ నేర్చుకోండి</p>
   </div>
 </div>
 /* ================= BACKGROUND LAYER ================= */
@@ -280,9 +287,263 @@ header,
   background-color: rgba(255,255,255,0.95); /* solid look */
 }
 
-/* Make rest transparent to show bg */
-.hero,
-section,
-footer {
-  background: transparent;
+/* ===== ABOUT FULL WIDTH ===== */
+.about-modern {
+  width: 100%;
+  padding: 80px 5%;
+  background: #f8fafc;
+}
+
+/* Wrapper */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LEFT IMAGE */
+.about-left img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* RIGHT CONTENT */
+.about-right {
+  flex: 1;
+}
+
+.about-right h2 {
+  font-size: 36px;
+  color: #002b5c;
+  margin-bottom: 10px;
+}
+
+.about-right h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ff7a00;
+}
+
+.about-right p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* STATS */
+.about-stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.about-stats div h4 {
+  font-size: 24px;
+  color: #002b5c;
+}
+
+.about-stats div span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* TAGS */
+.about-tags span {
+  display: inline-block;
+  background: #e2e8f0;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-stats {
+    justify-content: center;
+  }
+}
+/* ===== CLEAN FULL-WIDTH FOOTER ===== */
+/* ===== PREMIUM SLIM FOOTER ===== */
+/* ===== FORCE FOOTER FIX ===== */
+.main-footer {
+  all: unset;                 /* resets all inherited weird styles */
+  display: block;
+  width: 100%;
+  background: #ffffff;        /* clean white */
+  border-top: 1px solid #e5e7eb;
+  padding: 15px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* inner layout */
+.main-footer > div {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+/* icons row */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* uniform icons */
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #333;
+}
+
+/* hover colors */
+.youtube:hover { background:#FF0000; color:#fff; }
+.instagram:hover { background:#E1306C; color:#fff; }
+.linkedin:hover { background:#0077B5; color:#fff; }
+.email:hover { background:#22c55e; color:#fff; }
+.telegram:hover { background:#0088cc; color:#fff; }
+
+/* links */
+.footer-links {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-links a {
+  color: #666;
+  margin: 0 5px;
+}
+
+.footer-bottom {
+  font-size: 11px;
+  color: #999;
+}
+/* ===== MODERN ABOUT CARD ===== */
+.about-card-section {
+  padding: 60px 20px;
+  background: #f1f5f9;
+}
+
+.about-card {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.about-img img {
+  width: 260px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.about-info {
+  flex: 1;
+}
+
+.about-info h2 {
+  font-size: 30px;
+  color: #002b5c;
+}
+
+.about-info .tagline {
+  color: #ff7a00;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-desc {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* STATS */
+.about-stats {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+}
+
+.stat i {
+  font-size: 22px;
+  color: #ff9900;
+  margin-bottom: 5px;
+}
+
+.stat h3 {
+  margin: 5px 0;
+  color: #002b5c;
+}
+
+.stat p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* SKILLS */
+.about-skills span {
+  display: inline-block;
+  background: #e2e8f0;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.about-skills span:hover {
+  background: #ff9900;
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 200px;
+  }
+
+  .about-stats {
+    flex-direction: column;
+  }
 }
