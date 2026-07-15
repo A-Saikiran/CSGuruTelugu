@@ -1,181 +1,973 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSGuruTelugu</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        CS Guru Telugu | Learn Computer Science in Telugu
+    </title>
+
+    <meta name="description"
+          content="Learn Cisco Networking, Java, Python, Data Science, AI, Computer Science Subjects and Placement Preparation in Telugu.">
+
+    <meta name="keywords"
+          content="CS Guru Telugu, Cisco Telugu, Java Telugu, Python Telugu, Data Science Telugu, Computer Science Telugu">
+
+    <meta name="author"
+          content="A. Saikiran">
+
+    <meta property="og:title"
+          content="CS Guru Telugu">
+
+    <meta property="og:description"
+          content="Free Computer Science Learning Platform">
+
+    <meta property="og:type"
+          content="website">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <script defer
+            src="script.js"></script>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="icon" href="logo.jpg">
+
 </head>
 
 <body>
 
-<header>
-  <div class="header-container">
-    <!-- BRAND SECTION -->
-    <div class="brand-section">
-      <img src="logo.jpg" class="logo-img" alt="logo">
-      <div class="brand-text">
-        <h1 class="brand-name">CSGuruTelugu</h1>
-        <span class="tagline">Learn Today. Lead Tomorrow.</span>
-      </div>
-    </div>
+<!-- LOADER -->
 
-    <!-- STATUS SECTION -->
-    <div class="status-wrapper">
-      <div class="clock-box" id="clock-box"></div>
-    </div>
-  </div>
-</header>
+<div class="loader">
+
+    <div class="loader-circle"></div>
+
+</div>
+
+<!-- PROGRESS BAR -->
+
+<div class="progress-bar"></div>
+
+<!-- PARTICLES -->
+
+<div class="particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<!-- MOUSE GLOW -->
+
+<div class="mouse-glow"></div>
 
 <!-- NAVBAR -->
-<nav class="menu-3d">
-  <a href="#"><i class="fas fa-home"></i><p>Home</p></a>
 
-  <div class="has-submenu">
-    <a href="#exams"><i class="fas fa-graduation-cap"></i><p>Exams <i class="fas fa-chevron-down"></i></p></a>
-    <div class="submenu">
-      <a href="ugcnet.html" target="_blank">UGC NET</a>
-      <a href="tgset.html" target="_blank">TG SET</a>
-      <a href="gate.html" target="_blank">GATE</a>
+<header class="navbar">
+
+    <div class="logo">
+
+        <img src="logo.jpg"
+             alt="CS Guru Telugu Logo">
+
+        <div class="logo-meta">
+            <span class="logo-text">CS Guru Telugu</span>
+            <span class="nav-clock" id="navClock"></span>
+        </div>
+
     </div>
-  </div>
 
-  <div class="has-submenu">
-    <a href="#courses"><i class="fas fa-laptop-code"></i><p>Courses <i class="fas fa-chevron-down"></i></p></a>
-    <div class="submenu">
-      <a href="java.html" target="_blank">Java</a>
-      <a href="cisco.html" target="_blank">Cisco Networking</a>
+    <nav id="mainNav">
+
+        <a href="#home">Home</a>
+
+        <a href="#courses">Courses</a>
+
+        <a href="#videos">Videos</a>
+
+        <a href="#resources">Resources</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="theme-btn"
+                id="themeBtn"
+                onclick="toggleTheme()">
+
+            🌙
+
+        </button>
+
+        <button class="nav-toggle"
+                id="navToggle"
+                aria-label="Open menu">
+
+            ☰
+
+        </button>
+
     </div>
-  </div>
 
-  <a href="freetutorials.html" target="_blank"><i class="fas fa-video"></i><p>Free Tutorials</p></a>
-  <a href="#resources"><i class="fas fa-book"></i><p>Resources</p></a>
-  <a href="telangana.html" target="_blank"><i class="fas fa-map-marker-alt"></i><p>Telangana Portal</p></a>
-  <a href="techupdates.html" target="_blank"><i class="fas fa-bullhorn"></i><p>Tech Updates</p></a>
-  <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank"><i class="fab fa-youtube"></i><p>YouTube</p></a>
-</nav>
+</header>
 
-<!-- FESTIVAL MESSAGE BELOW MENU -->
-<div id="festival-msg"></div>
+<!-- HERO -->
 
-<!-- HERO SECTION -->
-<section class="hero">
+<section id="home"
+         class="hero">
 
-  <!-- Background Slider -->
-  <div class="hero-bg" id="hero-bg"></div>
+    <!-- Aurora -->
 
-  <!-- Content -->
-  <div class="hero-content">
-    <h1 class="hero-title">Telugu Tech Learning Platform</h1>
-    <p class="hero-subtitle">తెలుగులో టెక్నాలజీ నేర్చుకోండి</p>
-    
-  </div>
+    <div class="aurora">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div class="hero-content">
+
+        <span class="badge">
+
+            🚀 Telangana's Computer Science Learning Platform
+
+        </span>
+
+        <h1>
+
+            Learn
+
+            <span>Computer Science</span>
+
+            in Telugu
+
+        </h1>
+
+        <p>
+
+            Master Cisco Networking, Java,
+            Python, Data Science,
+            Artificial Intelligence,
+            Placement Preparation,
+            Interview Questions and Government Job Updates
+            completely FREE.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#courses"
+               class="btn-primary">
+
+                🚀 Start Learning
+
+            </a>
+
+            <a href="https://www.youtube.com/@CSGuruTelugu"
+               target="_blank"
+               class="btn-secondary">
+
+                ▶ Watch Free Classes
+
+            </a>
+
+        </div>
+
+        <div class="stats">
+
+            <div>
+
+                <h2>100+</h2>
+
+                <span>
+
+                    Tutorials
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <h2>15+</h2>
+
+                <span>
+
+                    Subjects
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <h2>500+</h2>
+
+                <span>
+
+                    Practice Programs
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <h2>100%</h2>
+
+                <span>
+
+                    Free Learning
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Hero Image -->
+
+    <div class="hero-image">
+
+        <img src="saikiran.jpg"
+             alt="A. Saikiran, founder of CS Guru Telugu">
+
+    </div>
 
 </section>
-<!-- ================== BELOW HERO ================== -->
-<section class="about-card-section">
+<!-- ===========================================================
+     TRUSTED BY
+=========================================================== -->
 
-  <div class="about-card">
+<section class="section">
 
-    <!-- LEFT IMAGE -->
-    <div class="about-img">
-      <img src="saikiran.jpg" alt="Avudurthi Saikiran">
+    <h2>Trusted by Students</h2>
+
+    <p class="text-center mt-2">
+
+        Learning Computer Science in Telugu with practical examples,
+        interview preparation and real-world projects.
+
+    </p>
+
+    <div class="stats mt-5">
+
+        <div>
+
+            <h2>100+</h2>
+
+            <span>Video Tutorials</span>
+
+        </div>
+
+        <div>
+
+            <h2>1000+</h2>
+
+            <span>Students Reached</span>
+
+        </div>
+
+        <div>
+
+            <h2>15+</h2>
+
+            <span>Computer Science Topics</span>
+
+        </div>
+
+        <div>
+
+            <h2>FREE</h2>
+
+            <span>Learning Resources</span>
+
+        </div>
+
     </div>
 
-    <!-- RIGHT CONTENT -->
-    <div class="about-info">
+</section>
 
-      <h2>👨‍🏫 Avudurthi Saikiran</h2>
-      <p class="tagline">Founder of CSGuruTelugu</p>
+<!-- ===========================================================
+     POPULAR COURSES
+=========================================================== -->
 
-      <p class="about-desc">
-        Empowering Telugu learners with practical skills in programming, networking,
-        and emerging technologies—making complex concepts simple and career-focused.
-      </p>
+<section id="courses" class="section">
 
-      <!-- STATS -->
-      <div class="about-stats">
-        <div class="stat">
-          <i class="fas fa-users"></i>
-          <h3>600+</h3>
-          <p>Subscribers</p>
+    <h2>
+
+        Popular Courses
+
+    </h2>
+
+    <p class="text-center">
+
+        Start learning with structured tutorials.
+
+    </p>
+
+    <div class="card-grid">
+
+        <div class="course-card">
+
+            <h3>🌐 Cisco Networking</h3>
+
+            <p>
+
+                Packet Tracer, CCNA, Routing,
+                Switching, Networking Labs.
+
+            </p>
+
+            <a href="cisco.html">
+
+                Start Learning →
+
+            </a>
+
         </div>
 
-        <div class="stat">
-          <i class="fas fa-video"></i>
-          <h3>200+</h3>
-          <p>Videos</p>
+        <div class="course-card">
+
+            <h3>☕ Java Programming</h3>
+
+            <p>
+
+                Core Java, OOP,
+                Collections,
+                Interview Questions.
+
+            </p>
+
+            <a href="java.html">
+
+                Explore →
+
+            </a>
+
         </div>
 
-      
-      </div>
+        <div class="course-card">
 
-      <!-- SKILLS -->
-      <div class="about-skills">
+            <h3>🐍 Python</h3>
+
+            <p>
+
+                Python Programming,
+                Automation,
+                Problem Solving.
+
+            </p>
+
+            <a href="#">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>📊 Data Science</h3>
+
+            <p>
+
+                Machine Learning,
+                AI,
+                Analytics,
+                Real Projects.
+
+            </p>
+
+            <a href="#">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>🧠 Interview Preparation</h3>
+
+            <p>
+
+                Technical Questions,
+                HR Interviews,
+                Aptitude,
+                Coding.
+
+            </p>
+
+            <a href="#">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>🏛 Government Jobs</h3>
+
+            <p>
+
+                Telangana Jobs,
+                Central Government,
+                Current Affairs,
+                Notifications.
+
+            </p>
+
+            <a href="https://www.ncs.gov.in/" target="_blank" rel="noopener">
+
+                Explore →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+     RESOURCES
+=========================================================== -->
+
+<section id="resources" class="section">
+
+    <h2>
+
+        Free Resources &amp; Exam Prep
+
+    </h2>
+
+    <p class="text-center">
+
+        Direct links to every exam-prep hub and resource directory — no signup required.
+
+    </p>
+
+    <div class="card-grid">
+
+        <div class="course-card fade-in">
+            <span class="resource-tag">Exam Prep</span>
+            <h3>🎓 UGC NET Syllabus</h3>
+            <p>Unit-wise General Paper 1 &amp; Computer Science syllabus with NPTEL links.</p>
+            <a href="ugcnet.html">Open hub →</a>
+        </div>
+
+        <div class="course-card fade-in">
+            <span class="resource-tag">Exam Prep</span>
+            <h3>📘 TG SET Portal</h3>
+            <p>Notifications, previous papers, mock tests and syllabus.</p>
+            <a href="tgset.html">Open hub →</a>
+        </div>
+
+        <div class="course-card fade-in">
+            <span class="resource-tag">Exam Prep</span>
+            <h3>📐 GATE CS + DSAI</h3>
+            <p>Complete subject-wise prep hub with NPTEL lectures.</p>
+            <a href="gate.html">Open hub →</a>
+        </div>
+
+        <div class="course-card fade-in">
+            <span class="resource-tag">Directory</span>
+            <h3>🏛 Telangana Academic Hub</h3>
+            <p>Every Telangana CET, education board and government university.</p>
+            <a href="telangana.html">Open hub →</a>
+        </div>
+
+        <div class="course-card fade-in">
+            <span class="resource-tag">Directory</span>
+            <h3>📚 Free Tutorials</h3>
+            <p>65+ verified links across MOOCs, docs and coding platforms.</p>
+            <a href="freetutorials.html">Open hub →</a>
+        </div>
+
+        <div class="course-card fade-in">
+            <span class="resource-tag">Directory</span>
+            <h3>🌐 Trusted Tech News</h3>
+            <p>A short list of reliable global &amp; Indian technology sources.</p>
+            <a href="techupdates.html">Open hub →</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+     FEATURED LEARNING PATHS
+=========================================================== -->
+
+<section class="section">
+
+    <h2>
+
+        Learning Paths
+
+    </h2>
+
+    <div class="roadmap">
+
+        <div class="road-step">
+
+            💻
+
+            <br><br>
+
+            Beginner Programmer
+
+        </div>
+
+        <div class="road-step">
+
+            🌐
+
+            <br><br>
+
+            Networking Engineer
+
+        </div>
+
+        <div class="road-step">
+
+            ☕
+
+            <br><br>
+
+            Java Developer
+
+        </div>
+
+        <div class="road-step">
+
+            🤖
+
+            <br><br>
+
+            AI & Data Scientist
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+     LATEST YOUTUBE VIDEOS
+=========================================================== -->
+
+<section id="videos" class="section">
+
+    <h2>
+
+        Latest YouTube Videos
+
+    </h2>
+
+    <p class="text-center">
+
+        Watch free Computer Science tutorials.
+
+    </p>
+
+    <div class="card-grid">
+
+        <div class="course-card">
+
+            <div class="video-thumb">☕</div>
+
+            <h3 class="mt-3">
+
+                Java Programming
+
+            </h3>
+
+            <p>
+
+                Complete Java Tutorials in Telugu.
+
+            </p>
+
+            <a href="java.html">
+
+                ▶ Watch Playlist
+
+            </a>
+
+        </div>
+
+        <div class="course-card">
+
+            <div class="video-thumb">🌐</div>
+
+            <h3 class="mt-3">
+
+                Cisco Packet Tracer
+
+            </h3>
+
+            <p>
+
+                Networking Practical Sessions.
+
+            </p>
+
+            <a href="cisco.html">
+
+                ▶ Watch Playlist
+
+            </a>
+
+        </div>
+
+        <div class="course-card">
+
+            <div class="video-thumb">🐍</div>
+
+            <h3 class="mt-3">
+
+                Python Programming
+
+            </h3>
+
+            <p>
+
+                Learn Python from Scratch.
+
+            </p>
+
+            <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank" rel="noopener">
+
+                ▶ Watch on YouTube
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===========================================================
+     TESTIMONIALS
+=========================================================== -->
+
+<section class="section">
+
+    <h2>❤️ What Students Say</h2>
+
+    <p class="text-center">
+        Real feedback from learners of CS Guru Telugu.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="course-card">
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+
+                "Networking became very easy after
+                watching the Cisco Packet Tracer videos."
+
+            </p>
+
+            <strong>- Engineering Student</strong>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+
+                "Best Telugu explanation for Java.
+                Very simple and practical."
+
+            </p>
+
+            <strong>- B.Tech Student</strong>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+
+                "The notes and MCQs helped me score
+                better in university exams."
+
+            </p>
+
+            <strong>- CSE Student</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+     NEWSLETTER
+=========================================================== -->
+
+<section class="section">
+
+    <h2>📬 Stay Updated</h2>
+
+    <p class="text-center">
+
+        Get notified whenever new tutorials,
+        notes and government job updates are published.
+
+    </p>
+
+    <div class="center mt-5">
+
+        <form class="newsletter">
+
+            <input
+                type="email"
+                placeholder="Enter your email">
+
+            <button class="btn-primary">
+
+                Subscribe
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+     ABOUT
+=========================================================== -->
+
+<section id="about" class="section">
+
+    <h2>👨‍🏫 About the Founder</h2>
+
+    <p>
+
+        <strong>Avudurthi Saikiran</strong> is the founder of CS Guru Telugu — empowering
+        Telugu learners with practical, career-focused skills in programming,
+        networking and emerging technologies. Every video breaks complex
+        Computer Science concepts down into simple, real-world explanations,
+        with a strong focus on placement preparation and government exam updates.
+
+    </p>
+
+    <div class="about-tags">
         <span>Java</span>
-		<span>DSA</span>
+        <span>DSA</span>
         <span>Networking</span>
         <span>Cyber Security</span>
         <span>Tech News</span>
-        <span>Educational Updates</span>
-		<span>Free Tech Resources</span>
-		
-      </div>
-
+        <span>Free Resources</span>
     </div>
 
-  </div>
+    <div class="about-connect">
+        <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank" rel="noopener">▶ YouTube</a>
+        <a href="https://www.instagram.com/csgurutelugu/" target="_blank" rel="noopener">📸 Instagram</a>
+        <a href="https://www.linkedin.com/in/avudurthi-saikiran-8a43a150/" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a href="https://t.me/csgurutelugu" target="_blank" rel="noopener">✈ Telegram</a>
+    </div>
 
 </section>
 
-<!-- SCRIPT -->
-<script src="script.js"></script>
+<!-- ===========================================================
+     CONTACT
+=========================================================== -->
 
-<footer class="main-footer">
+<section id="contact" class="section">
 
-  <!-- Social Section -->
-  <div class="footer-social">
-    <h3>Connect with Me</h3>
+    <h2>📩 Contact</h2>
 
-<div class="social-icons">
+    <p class="text-center">
 
-  <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank" class="youtube">
-    <i class="fab fa-youtube"></i>
-  </a>
+        Feel free to connect with me.
 
-  <a href="https://www.instagram.com/csgurutelugu/" target="_blank" class="instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
+    </p>
 
-  <a href="https://www.linkedin.com/in/avudurthi-saikiran-8a43a150/" target="_blank" class="linkedin">
-    <i class="fab fa-linkedin"></i>
-  </a>
+    <div class="card-grid">
 
-  <a href="mailto:techarambham@gmail.com" class="email">
-    <i class="fas fa-envelope"></i>
-  </a>
+        <div class="course-card">
 
-  <a href="https://t.me/csgurutelugu" target="_blank" class="telegram">
-    <i class="fab fa-telegram"></i>
-  </a>
+            <h3>📧 Email</h3>
 
-</div>
-</div>
+            <p>
 
-  <!-- Legal Links -->
-  <div class="footer-links">
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a> |
-    <a href="disclaimer.html">Disclaimer</a>
-  </div>
+                <a href="mailto:cs.gurutelugu@gmail.com">cs.gurutelugu@gmail.com</a>
 
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>© 2026 CSGuruTelugu. All rights reserved.</p>
-  </div>
+            </p>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>▶ YouTube</h3>
+
+            <p>
+
+                CS Guru Telugu
+
+            </p>
+
+            <a href="https://www.youtube.com/@CSGuruTelugu" target="_blank" rel="noopener">
+
+                Visit Channel →
+
+            </a>
+
+        </div>
+
+        <div class="course-card">
+
+            <h3>💻 GitHub</h3>
+
+            <p>
+
+                a-saikiran.github.io
+
+            </p>
+
+            <a href="https://github.com/a-saikiran" target="_blank" rel="noopener">
+
+                View Profile →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================================
+     FOOTER
+=========================================================== -->
+
+<footer>
+
+    <div class="section">
+
+        <h2>
+
+            CS Guru Telugu
+
+        </h2>
+
+        <p>
+
+            Making Computer Science education
+            simple, practical and accessible
+            in Telugu.
+
+        </p>
+
+        <br>
+
+        <div class="hero-buttons">
+
+            <a href="#home"
+               class="btn-secondary">
+
+                Home
+
+            </a>
+
+            <a href="#courses"
+               class="btn-secondary">
+
+                Courses
+
+            </a>
+
+            <a href="#resources"
+               class="btn-secondary">
+
+                Resources
+
+            </a>
+
+            <a href="#contact"
+               class="btn-secondary">
+
+                Contact
+
+            </a>
+
+        </div>
+
+        <br><br>
+
+        <p>
+
+            © 2026 CS Guru Telugu
+
+            <br><br>
+
+            Designed with ❤️ by
+            A. Saikiran
+
+        </p>
+
+    </div>
 
 </footer>
 
+<!-- ===========================================================
+     BACK TO TOP
+=========================================================== -->
+
+<button id="topBtn">
+
+    ↑
+
+</button>
+
 </body>
+
 </html>
