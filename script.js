@@ -1,257 +1,415 @@
-// 🎉 TELANGANA + IMPORTANT DAYS (MULTIPLE SUPPORT)
-const events = {
+/* ==========================================================
+   CS GURU TELUGU
+   APP.JS
+========================================================== */
 
-  // ================= JAN =================
-  "01-Jan": ["New Year’s Day 🎉"],
-  "04-Jan": ["World Braille Day"],
-  "09-Jan": ["NRI Day"],
-  "10-Jan": ["World Hindi Day"],
-  "12-Jan": ["National Youth Day"],
-  "15-Jan": ["Army Day", "Sankranti / Pongal 🌾"],
-  "14-Jan": ["Bhogi 🔥"],
-  "24-Jan": ["National Girl Child Day"],
-  "25-Jan": ["National Voters Day"],
-  "26-Jan": ["Republic Day 🇮🇳"],
-  "30-Jan": ["Martyrs’ Day"],
+// ==========================================================
+// LOADER
+// ==========================================================
 
-  // ================= FEB =================
-  "02-Feb": ["World Wetlands Day"],
-  "04-Feb": ["World Cancer Day"],
-  "11-Feb": ["Women in Science Day"],
-  "14-Feb": ["Valentine’s Day ❤️"],
-  "15-Feb": ["Maha Shivaratri 🕉️"],
-  "21-Feb": ["Mother Language Day"],
-  "28-Feb": ["National Science Day"],
+window.addEventListener("load", () => {
 
-  // ================= MAR =================
-  "01-Mar": ["Zero Discrimination Day"],
-  "03-Mar": ["Holi 🎨", "World Wildlife Day"],
-  "08-Mar": ["International Women’s Day 👩"],
-  "15-Mar": ["Consumer Rights Day"],
-  "19-Mar": ["Ugadi 🌿"],
-  "20-Mar": ["Happiness Day"],
-  "21-Mar": ["Eid-ul-Fitr 🌙", "Forest Day"],
-  "22-Mar": ["World Water Day 💧"],
-  "23-Mar": ["Shaheed Diwas"],
-  "24-Mar": ["TB Day"],
-  "27-Mar": ["Sri Rama Navami 🏹"],
+    const loader = document.querySelector(".loader");
 
-  // ================= APR =================
-  "02-Apr": ["Autism Awareness Day"],
-  "03-Apr": ["Good Friday ✝️"],
-  "07-Apr": ["World Health Day"],
-  "10-Apr": ["Homeopathy Day"],
-  "14-Apr": ["Ambedkar Jayanti"],
-  "18-Apr": ["Heritage Day"],
-  "21-Apr": ["Civil Services Day"],
-  "22-Apr": ["Earth Day 🌍"],
-  "23-Apr": ["Book Day 📚"],
+    if (loader) {
 
-  // ================= MAY =================
-  "01-May": ["Labour Day 👷"],
-  "03-May": ["Press Freedom Day"],
-  "08-May": ["Red Cross Day"],
-  "11-May": ["National Technology Day"],
-  "12-May": ["Nurses Day"],
-  "15-May": ["Family Day"],
-  "17-May": ["Telecom Day"],
-  "27-May": ["Eid-ul-Adha 🐐"],
+        setTimeout(() => {
 
-  // ================= JUN =================
-  "01-Jun": ["Parents Day"],
-  "05-Jun": ["Environment Day 🌱"],
-  "08-Jun": ["Oceans Day"],
-  "12-Jun": ["Anti Child Labour Day"],
-  "14-Jun": ["Blood Donor Day"],
-  "21-Jun": ["Yoga Day 🧘"],
-  "23-Jun": ["Olympic Day"],
-  "26-Jun": ["Moharram", "Anti Drug Day"],
+            loader.classList.add("hide");
 
-  // ================= JUL =================
-  "01-Jul": ["Doctor’s Day 👨‍⚕️"],
-  "11-Jul": ["Population Day"],
-  "26-Jul": ["Kargil Vijay Diwas"],
+        }, 700);
 
-  // ================= AUG =================
-  "10-Aug": ["Bonalu 🎉"],
-  "12-Aug": ["Youth Day"],
-  "15-Aug": ["Independence Day 🇮🇳"],
-  "16-Aug": ["Parsi New Year"],
-  "19-Aug": ["Photography Day"],
-  "26-Aug": ["Milad-un-Nabi 🌙"],
-  "29-Aug": ["Sports Day"],
-
-  // ================= SEP =================
-  "05-Sep": ["Teachers’ Day 👩‍🏫"],
-  "08-Sep": ["Literacy Day"],
-  "14-Sep": ["Vinayaka Chavithi 🐘", "Hindi Day"],
-  "15-Sep": ["Engineers Day"],
-  "16-Sep": ["Ozone Day"],
-  "21-Sep": ["Peace Day"],
-  "27-Sep": ["Tourism Day"],
-
-  // ================= OCT =================
-  "01-Oct": ["Old Age Day"],
-  "02-Oct": ["Gandhi Jayanti"],
-  "05-Oct": ["World Teachers Day"],
-  "10-Oct": ["Mental Health Day"],
-  "16-Oct": ["Food Day"],
-  "18-Oct": ["Bathukamma 🌸"],
-  "20-Oct": ["Dussehra 🏹"],
-  "24-Oct": ["UN Day"],
-
-  // ================= NOV =================
-  "08-Nov": ["Deepavali 🪔"],
-  "11-Nov": ["Education Day"],
-  "14-Nov": ["Children’s Day 👶"],
-  "19-Nov": ["International Men’s Day 👨"],
-  "20-Nov": ["Child Rights Day"],
-  "26-Nov": ["Constitution Day"],
-
-  // ================= DEC =================
-  "01-Dec": ["World AIDS Day"],
-  "04-Dec": ["Navy Day"],
-  "10-Dec": ["Human Rights Day"],
-  "14-Dec": ["Energy Day"],
-  "25-Dec": ["Christmas 🎄"],
-  "26-Dec": ["Boxing Day"]
-};
-
-// 🔗 WIKI LINKS
-const festWiki = {
-  "Bhogi": "https://en.wikipedia.org/wiki/Bhogi",
-  "Sankranti": "https://en.wikipedia.org/wiki/Makar_Sankranti",
-  "Holi": "https://en.wikipedia.org/wiki/Holi",
-  "Ugadi": "https://en.wikipedia.org/wiki/Ugadi",
-  "Ramzan": "https://en.wikipedia.org/wiki/Eid_al-Fitr",
-  "Bakrid": "https://en.wikipedia.org/wiki/Eid_al-Adha",
-  "Bonalu": "https://en.wikipedia.org/wiki/Bonalu",
-  "Vinayaka": "https://en.wikipedia.org/wiki/Ganesh_Chaturthi",
-  "Dussehra": "https://en.wikipedia.org/wiki/Vijayadashami",
-  "Deepavali": "https://en.wikipedia.org/wiki/Diwali",
-  "Christmas": "https://en.wikipedia.org/wiki/Christmas",
-  "Women": "https://en.wikipedia.org/wiki/International_Women%27s_Day",
-  "Men": "https://en.wikipedia.org/wiki/International_Men%27s_Day",
-  "Teachers": "https://en.wikipedia.org/wiki/Teachers%27_Day"
-};
-
-
-// 🔥 CLOCK + EVENTS DISPLAY
-function updateClock() {
-    const now = new Date();
-
-    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const dayName = days[now.getDay()];
-
-    const d = String(now.getDate()).padStart(2,'0');
-
-    const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    const m = monthNames[now.getMonth()];
-
-    const y = now.getFullYear();
-    const time = now.toLocaleTimeString('en-IN',{hour12:true});
-
-    const clockEl = document.getElementById("clock-box");
-    const festivalEl = document.getElementById("festival-msg");
-
-    // ⏰ CLOCK
-    if(clockEl){
-        clockEl.innerHTML = `
-        <span class="date-part">${dayName}, ${d}-${m}-${y}</span><br>
-        <span class="time-part">${time}</span>
-        `;
     }
 
-    // 🎉 EVENTS
-    const key = `${d}-${m}`;
-    const todayEvents = events[key];
-
-    if(festivalEl && todayEvents){
-
-        const message = todayEvents.join("  ✦  ");
-
-   festivalEl.innerHTML = `
-  <span class="fest-scroll">
-    🎉 ${message} 🎉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>
-`;
-
-        festivalEl.className = "festival-msg";
-
-        const text = message;
-
-        // 🎨 COLORS
-        if(text.includes("Deepavali")) festivalEl.classList.add("diwali");
-        else if(text.includes("Sankranti")) festivalEl.classList.add("sankranti");
-        else if(text.includes("Eid") || text.includes("Ramzan")) festivalEl.classList.add("ramzan");
-        else if(text.includes("Christmas")) festivalEl.classList.add("christmas");
-        else if(text.includes("Ugadi")) festivalEl.classList.add("ugadi");
-        else if(text.includes("Women")) festivalEl.style.background = "linear-gradient(90deg,#e91e63,#ff4081)";
-        else if(text.includes("Men")) festivalEl.style.background = "linear-gradient(90deg,#2196f3,#00bcd4)";
-        else festivalEl.classList.add("default-fest");
-
-        // 🔗 CLICK
-        festivalEl.onclick = () => {
-            let link = "https://en.wikipedia.org/wiki/";
-            for(let key in festWiki){
-                if(text.includes(key)){
-                    link = festWiki[key];
-                    break;
-                }
-            }
-            window.open(link, "_blank");
-        };
-    }
-}
-
-
-// ⏳ LOAD FAST (NO DELAY)
-window.onload = () => {
-  setInterval(updateClock, 1000);
-  updateClock();
-};
-
-
-// 🔥 HERO (OPTIMIZED)
-const heroBg = document.getElementById("hero-bg");
-
-if(heroBg){
-    const images = [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
-      "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=1200",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200",
-      "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=1200"
-    ];
-
-    const allImages = [...images, ...images];
-
-    heroBg.innerHTML = "";
-
-    allImages.forEach(src => {
-        const div = document.createElement("div");
-        div.style.backgroundImage = `url(${src})`;
-        heroBg.appendChild(div);
-    });
-}
-
-
-// 🔥 SUBMENU (UNCHANGED)
-document.querySelectorAll('.has-submenu > a').forEach(item => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    const submenu = item.nextElementSibling;
-
-    document.querySelectorAll('.submenu').forEach(s => {
-      if (s !== submenu) s.classList.remove('show');
-    });
-
-    submenu.classList.toggle('show');
-  });
 });
 
-window.addEventListener('click', (e) => {
-  if (!e.target.closest('.has-submenu')) {
-    document.querySelectorAll('.submenu').forEach(s => s.classList.remove('show'));
-  }
+// ==========================================================
+// THEME TOGGLE
+// ==========================================================
+
+function updateThemeIcon() {
+
+    const btn = document.getElementById("themeBtn");
+
+    if (!btn) return;
+
+    btn.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
+
+}
+
+function toggleTheme() {
+
+    document.body.classList.toggle("light");
+
+    const mode = document.body.classList.contains("light")
+        ? "light"
+        : "dark";
+
+    localStorage.setItem("theme", mode);
+
+    updateThemeIcon();
+
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "light") {
+
+        document.body.classList.add("light");
+
+    }
+
+    updateThemeIcon();
+
+});
+
+// ==========================================================
+// LIVE DATE & TIME (navbar clock)
+// ==========================================================
+
+function tickClock() {
+
+    const el = document.getElementById("navClock");
+
+    if (!el) return;
+
+    const now = new Date();
+
+    const options = {
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+        timeZone: "Asia/Kolkata"
+    };
+
+    el.textContent = now.toLocaleString("en-IN", options) + " IST";
+
+}
+
+tickClock();
+setInterval(tickClock, 1000);
+
+// ==========================================================
+// MOBILE NAV TOGGLE
+// ==========================================================
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const toggleBtn = document.getElementById("navToggle");
+    const nav = document.getElementById("mainNav");
+
+    if (!toggleBtn || !nav) return;
+
+    toggleBtn.addEventListener("click", () => {
+
+        nav.classList.toggle("open");
+        toggleBtn.classList.toggle("is-open");
+
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            nav.classList.remove("open");
+            toggleBtn.classList.remove("is-open");
+
+        });
+
+    });
+
+});
+
+// ==========================================================
+// NEWSLETTER FORM (no backend — friendly inline confirmation)
+// ==========================================================
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.querySelector(".newsletter");
+
+    if (!form) return;
+
+    form.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        const input = form.querySelector("input[type=email]");
+
+        let note = form.parentElement.querySelector(".newsletter-note");
+
+        if (!note) {
+
+            note = document.createElement("p");
+            note.className = "newsletter-note";
+            form.parentElement.appendChild(note);
+
+        }
+
+        if (input && input.value) {
+
+            note.textContent = "✅ Thanks! We'll notify " + input.value + " about new updates.";
+            input.value = "";
+
+        }
+
+    });
+
+});
+
+// ==========================================================
+// SCROLL PROGRESS BAR
+// ==========================================================
+
+window.addEventListener("scroll", () => {
+
+    const progress = document.querySelector(".progress-bar");
+
+    if (!progress) return;
+
+    const scrollTop = document.documentElement.scrollTop;
+
+    const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const percent = (scrollTop / height) * 100;
+
+    progress.style.width = percent + "%";
+
+});
+
+// ==========================================================
+// BACK TO TOP BUTTON
+// ==========================================================
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (!topBtn) return;
+
+    if (window.scrollY > 400) {
+
+        topBtn.classList.add("show");
+
+    } else {
+
+        topBtn.classList.remove("show");
+
+    }
+
+});
+
+if (topBtn) {
+
+    topBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+// ==========================================================
+// MOUSE GLOW
+// ==========================================================
+
+const glow = document.querySelector(".mouse-glow");
+
+document.addEventListener("mousemove", (e) => {
+
+    if (!glow) return;
+
+    glow.style.left = e.clientX + "px";
+
+    glow.style.top = e.clientY + "px";
+
+});
+
+// ==========================================================
+// FADE-IN ANIMATION
+// ==========================================================
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.2
+
+});
+
+document.querySelectorAll(
+    ".fade-in,.fade-scale,.course-card,.road-step"
+).forEach(el => {
+
+    observer.observe(el);
+
+});
+
+// ==========================================================
+// SIMPLE COUNTER (animates when scrolled into view)
+// ==========================================================
+
+const counters = document.querySelectorAll(".stats h2");
+
+function animateCounter(counter) {
+
+    if (counter.dataset.counted) return;
+    counter.dataset.counted = "true";
+
+    const value = counter.innerText;
+
+    const number = parseInt(value);
+
+    if (isNaN(number)) return;
+
+    const suffix = value.replace(String(number), "");
+
+    counter.innerText = "0" + suffix;
+
+    let current = 0;
+
+    const increment = Math.ceil(number / 50) || 1;
+
+    const timer = setInterval(() => {
+
+        current += increment;
+
+        if (current >= number) {
+
+            counter.innerText = number + suffix;
+
+            clearInterval(timer);
+
+        } else {
+
+            counter.innerText = current + suffix;
+
+        }
+
+    }, 25);
+
+}
+
+if ("IntersectionObserver" in window && counters.length) {
+
+    const counterObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, { threshold: 0.4 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+} else {
+
+    counters.forEach(animateCounter);
+
+}
+
+// ==========================================================
+// NAVBAR SHADOW
+// ==========================================================
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (!navbar) return;
+
+    if (window.scrollY > 30) {
+
+        navbar.style.boxShadow =
+            "0 15px 45px rgba(0,0,0,.45)";
+
+    } else {
+
+        navbar.style.boxShadow =
+            "0 8px 25px rgba(0,0,0,.25)";
+
+    }
+
+});
+// ==========================================================
+// SCROLLSPY — highlight the nav link for the section in view
+// ==========================================================
+
+(function () {
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".navbar nav a[href^='#']");
+
+    if (!sections.length || !navLinks.length || !("IntersectionObserver" in window)) return;
+
+    const spy = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const id = entry.target.getAttribute("id");
+
+                navLinks.forEach(link => {
+
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === "#" + id
+                    );
+
+                });
+
+            }
+
+        });
+
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+    sections.forEach(section => spy.observe(section));
+
+})();
+
+// ==========================================================
+// CARD STAGGER — cascading reveal delay per card in a grid
+// ==========================================================
+
+document.querySelectorAll(".card-grid").forEach(grid => {
+
+    [...grid.children].forEach((card, i) => {
+
+        card.style.setProperty("--stagger", i % 6);
+
+    });
+
 });
